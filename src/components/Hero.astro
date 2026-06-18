@@ -12,10 +12,8 @@ const { src = '/astronaut-hero-img.webp' }: Props = Astro.props
 
 <section class="hero my-24">
   <div class="container">
-    <div class="flex flex-col items-center gap-8 lg:grid lg:grid-cols-2 lg:gap-24">
+    <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-24">
       <div class="flex flex-col items-center gap-6 md:items-start">
-        <!-- Logo 图片，移动端也显示，缩小尺寸适应屏幕 -->
-        <img src="/img/logo.jpg" alt="花江安全局 Logo" class="w-32 md:w-40 lg:w-48 h-auto rounded-2xl shadow-lg" />
         <h1 class="text-center text-4xl md:text-6xl lg:text-8xl md:text-left">
           <span class="text-gradient">花江安全</span>
         </h1>
@@ -45,7 +43,8 @@ const { src = '/astronaut-hero-img.webp' }: Props = Astro.props
           </Link>
         </div>
       </div>
-      <Image class="hidden lg:block" src={src} alt="" decoding="async" width={800} height={600} loading="eager" />
+      <!-- 宇航员图片在所有屏幕上都显示，手机端放在文字下方 -->
+      <Image class="mx-auto w-3/4 lg:w-full" src={src} alt="" decoding="async" width={800} height={600} loading="eager" />
     </div>
   </div>
 </section>
