@@ -291,3 +291,43 @@
     z-index: -1;
   }
 }
+
+// =====================================================
+// 格言特效：柔光背景、左侧装饰、圆角阴影
+// =====================================================
+.member-motto {
+  margin: 0.75rem 0 1rem;
+  padding: 0.6rem 1rem 0.6rem 1.2rem;
+  background: linear-gradient(135deg, rgba(var(--color-primary-rgb, 99,179,237), 0.08) 0%, rgba(var(--color-secondary-rgb, 183,148,244), 0.08) 100%);
+  border-left: 4px solid var(--color-primary, #4f8cc9);
+  border-radius: 0.5rem;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--foreground-color, #2d3748);
+  opacity: 0.9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+
+  // 引号装饰（可选）
+  &::before {
+    content: '“';
+    font-size: 3rem;
+    color: var(--color-primary, #4f8cc9);
+    opacity: 0.2;
+    position: absolute;
+    top: -0.5rem;
+    left: 0.25rem;
+    line-height: 1;
+    font-style: normal;
+  }
+
+  // 暗色模式
+  .dark & {
+    background: linear-gradient(135deg, rgba(99,179,237,0.1) 0%, rgba(183,148,244,0.1) 100%);
+    border-left-color: var(--color-primary-light, #63b3ed);
+    color: #e2e8f0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+}

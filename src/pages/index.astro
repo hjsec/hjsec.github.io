@@ -2,26 +2,44 @@
 import DefaultLayout from '@layouts/DefaultLayout.astro'
 import Hero from '@components/Hero.astro'
 import Feature from '@components/Feature.astro'
-import FeaturedPosts from '@components/FeaturedPosts.astro'
 ---
 
-<!-- 花江安全局官网，由步六孤于2026.06.18首次构建 -->
 <DefaultLayout title="花江安全局" useTitleTemplate={false}>
   <Hero />
 
+  <!-- 宣传图片展示（放在特色卡片前面） -->
   <section class="mb-24">
-    <div class="container grid gap-6 md:grid-cols-3">
-      <Feature icon="lucide:layout-template" title="从真实的结构开始" level="h2">
-        编辑 theme.config.ts，替换占位文字，围绕你的内容模型塑造网站。
-      </Feature>
-      <Feature icon="lucide:scissors" title="保留你需要的" level="h2">
-        本预设包含博客、作品集、联系表单和参考页面，方便你从丰富的起点开始裁剪。
-      </Feature>
-      <Feature icon="lucide:accessibility" title="无障碍构建" level="h2">
-        导航、颜色令牌、逻辑属性和易读的排版从一开始就已就绪。
-      </Feature>
+    <div class="container">
+      <h2 class="text-center text-3xl font-bold mb-12">我们的身影</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <img src="/img/xuanchuan.jpg" alt="社团宣传" class="w-full h-60 object-cover" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <img src="/img/door.jpg" alt="社团门口" class="w-full h-60 object-cover" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <img src="/img/inside.jpg" alt="社团内部" class="w-full h-60 object-cover" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <img src="/img/total.jpg" alt="社团合影" class="w-full h-60 object-cover" loading="lazy" />
+        </div>
+      </div>
     </div>
   </section>
 
-  <FeaturedPosts />
+  <!-- 特色卡片 -->
+  <section class="mb-24">
+    <div class="container grid gap-6 md:grid-cols-3">
+      <Feature icon="lucide:binary" title="二进制安全" level="h2">
+        栈溢出、堆利用、内核安全，用漏洞挖掘数字世界的基石。
+      </Feature>
+      <Feature icon="lucide:flag" title="CTF 竞赛" level="h2">
+        以赛代练，从校内选拔到全国决赛，用实力说话。
+      </Feature>
+      <Feature icon="lucide:users" title="招新与培训" level="h2">
+        零基础入门，学长带教，每周技术分享，快速成长。
+      </Feature>
+    </div>
+  </section>
 </DefaultLayout>
