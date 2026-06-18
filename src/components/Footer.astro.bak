@@ -1,0 +1,74 @@
+---
+import { Heading } from 'accessible-astro-components'
+---
+
+<footer class="mt-24 border-t border-[var(--border-color-subtle)] py-12">
+  <div class="container">
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+      <!-- 1. 社团信息 -->
+      <div class="space-content">
+        <Heading level="h3">花江安全局</Heading>
+        <p class="text-sm">
+          桂林电子科技大学计算机与信息安全学院大学生科技协会下属安全方向团队。
+        </p>
+        <p class="text-sm mt-2">
+          在二进制中寻找漏洞，在数字世界里找到我们。
+        </p>
+      </div>
+
+      <!-- 2. 快速链接 -->
+      <div class="space-content">
+        <Heading level="h3">快速链接</Heading>
+        <ul class="list-none space-y-2">
+          <li><a href="/" class="text-sm hover:underline">首页</a></li>
+          <li><a href="/about" class="text-sm hover:underline">关于我们</a></li>
+          <li><a href="/portfolio" class="text-sm hover:underline">成员</a></li>
+          <li><a href="/contact" class="text-sm hover:underline">加入我们</a></li>
+        </ul>
+      </div>
+
+      <!-- 3. 友情链接 -->
+      <div class="space-content">
+        <Heading level="h3">友情链接</Heading>
+        <ul class="list-none space-y-2">
+          <li>
+            <a href="https://todaymvp.github.io" target="_blank" rel="noopener noreferrer" class="text-sm hover:underline">
+              步六孤的博客
+            </a>
+          </li>
+          <li>
+            <a href="https://ctf-wiki.org/" target="_blank" rel="noopener noreferrer" class="text-sm hover:underline">
+              CTF Wiki
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 底部版权栏 -->
+    <div class="mt-12 border-t border-[var(--border-color-subtle)] pt-6 text-center text-sm">
+      <p>© 2026 花江安全局. Created by 步六孤.</p>
+      <p class="mt-2 opacity-70">
+        Tip: always test for screen reader support. Press ⌘ + F5 to start VoiceOver or Win + Ctrl + Enter for Narrator.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style lang="scss" is:global>
+  footer {
+    a {
+      color: var(--foreground-color);
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    a:hover {
+      opacity: 1;
+      color: var(--color-primary);
+    }
+    h3 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+  }
+</style>

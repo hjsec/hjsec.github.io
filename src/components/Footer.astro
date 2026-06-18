@@ -1,105 +1,74 @@
 ---
-import CallToAction from './CallToAction.astro'
-import Logo from './Logo.astro'
-import { Heading, Link } from 'accessible-astro-components'
-
-/**
- * Footer Component
- *
- * @description A component that displays the footer of the website
- */
-const currentYear = new Date().getFullYear()
+import { Heading } from 'accessible-astro-components'
 ---
 
-<footer>
-  <CallToAction />
-  <section class="py-20">
-    <Heading level="h2" class="sr-only">Footer</Heading>
-    <div class="container grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-      <div class="flex flex-col gap-4">
-        <Heading level="h3" size="h6">Features</Heading>
-        <ul class="flex flex-col gap-2">
-          <li><Link href="/accessibility-statement">Accessibility statement</Link></li>
-          <li><Link href="/accessible-components">Accessible components</Link></li>
-          <li><Link href="/color-contrast-checker">Color contrast checker</Link></li>
-          <li><Link href="/markdown-page">Markdown page</Link></li>
-          <li><Link href="/mdx-page">MDX page</Link></li>
-          <li><Link href="/404-page">404 page</Link></li>
-          <li><Link href="/sitemap">Sitemap</Link></li>
-        </ul>
-      </div>
-      <div class="flex flex-col gap-4">
-        <Heading level="h3" size="h6">Incluud projects</Heading>
-        <ul class="flex flex-col gap-2">
-          <li>
-            <Link isExternal href="https://accessible-astro-starter.incluud.dev">Accessible Astro Starter</Link>
-          </li>
-          <li>
-            <Link isExternal href="https://accessible-astro-dashboard.incluud.dev">Accessible Astro Dashboard</Link>
-          </li>
-          <li>
-            <Link isExternal href="https://accessible-astro-starter.incluud.dev/accessible-components"
-              >Accessible Astro Components</Link
-            >
-          </li>
-          <li>
-            <Link isExternal href="https://accessible-astro-docs.incluud.dev">Accessible Astro Docs</Link>
-          </li>
-          <li>
-            <Link isExternal href="https://color-contrast.incluud.dev">Color Contrast Checker</Link>
-          </li>
-        </ul>
-      </div>
-      <div class="flex flex-col gap-4">
-        <Heading level="h3" size="h6">Developer tools</Heading>
-        <ul class="flex flex-col gap-2">
-          <li>
-            <Link isExternal href="https://chrispederick.com/work/web-developer/">Web Developer Extension</Link>
-          </li>
-          <li>
-            <Link isExternal href="https://accessibilityinsights.io/">Accessibility Insights</Link>
-          </li>
-          <li>
-            <Link isExternal href="https://www.deque.com/axe/devtools/">axe DevTools</Link>
-          </li>
-          <li>
-            <Link isExternal href="https://wave.webaim.org/extension/">WAVE Web Accessibility</Link>
-          </li>
-          <li>
-            <Link isExternal href="https://www.w3.org/WAI/ARIA/apg/patterns/">ARIA Design Patterns</Link>
-          </li>
-          <li>
-            <Link isExternal href="https://aaardvarkaccessibility.com/wcag-plain-english/">WCAG Plain English</Link>
-          </li>
-        </ul>
-      </div>
-      <div class="flex flex-col gap-4">
-        <Logo loading="lazy" />
-        <p class="leading-[1.75]">
-          Tip: always test for screen reader support. Press <kbd class="kbd">⌘</kbd> + <kbd class="kbd">F5</kbd> to start
-          VoiceOver or <kbd class="kbd">Win</kbd>
-          + <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Enter</kbd> for Narrator.
+<footer class="mt-24 py-12" style="
+  background: linear-gradient(0deg, rgba(245,248,255,0.6) 0%, rgba(255,255,255,0) 100%);
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(90deg, #63b3ed, #b794f4) 1;
+">
+  <div class="container">
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+      <!-- 1. 社团信息 -->
+      <div class="space-content">
+        <Heading level="h3" class="!mb-3 !text-lg !font-semibold">花江安全局</Heading>
+        <p class="text-sm opacity-80">
+          桂林电子科技大学计算机与信息安全学院大学生科技协会下属安全方向团队。
         </p>
-        <p>Cute astronaut image by <Link href="https://unsplash.com/@kobbymendez">Kobby Mendez</Link> on Unsplash.</p>
+        <p class="text-sm mt-2 opacity-70 italic">
+          在二进制中寻找漏洞，在数字世界里找到我们。
+        </p>
+      </div>
+
+      <!-- 2. 快速链接 -->
+      <div class="space-content">
+        <Heading level="h3" class="!mb-3 !text-lg !font-semibold">快速链接</Heading>
+        <ul class="list-none space-y-2">
+          <li><a href="/" class="text-sm hover:underline" style="transition: color 0.2s;">首页</a></li>
+          <li><a href="/about" class="text-sm hover:underline" style="transition: color 0.2s;">关于我们</a></li>
+          <li><a href="/portfolio" class="text-sm hover:underline" style="transition: color 0.2s;">成员</a></li>
+          <li><a href="/contact" class="text-sm hover:underline" style="transition: color 0.2s;">加入我们</a></li>
+        </ul>
+      </div>
+
+      <!-- 3. 友情链接 -->
+      <div class="space-content">
+        <Heading level="h3" class="!mb-3 !text-lg !font-semibold">友情链接</Heading>
+        <ul class="list-none space-y-2">
+          <li>
+            <a href="https://todaymvp.github.io" target="_blank" rel="noopener noreferrer" class="text-sm hover:underline" style="transition: color 0.2s;">
+              步六孤的博客
+            </a>
+          </li>
+          <li>
+            <a href="https://ctf-wiki.org/" target="_blank" rel="noopener noreferrer" class="text-sm hover:underline" style="transition: color 0.2s;">
+              CTF Wiki
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-  </section>
-  <section class="py-8">
-    <div class="container flex flex-col gap-4 md:flex-row md:justify-between">
-      <p>
-        &copy; {currentYear} - Starter Theme for <Link href="https://astro.build/">Astro</Link>.
-      </p>
-      <p>
-        Made with ❤️ by <Link href="https://github.com/markteekman">Mark Teekman</Link>. Part of <Link
-          href="https://www.incluud.dev">Incluud</Link
-        >.
+
+    <!-- 底部版权栏 -->
+    <div class="mt-12 pt-6 text-center text-sm" style="border-top: 1px solid rgba(99,179,237,0.15);">
+      <p class="opacity-80">© 2026 花江安全局. Created by 步六孤.</p>
+      <p class="mt-2 opacity-50 text-xs">
+        Tip: always test for screen reader support. Press ⌘ + F5 to start VoiceOver or Win + Ctrl + Enter for Narrator.
       </p>
     </div>
-  </section>
+  </div>
 </footer>
 
-<style>
-  section {
-    border-top: 1px solid var(--border-color-subtle);
+<style lang="scss" is:global>
+  footer {
+    a {
+      color: var(--foreground-color);
+      opacity: 0.75;
+      transition: color 0.2s, opacity 0.2s;
+    }
+    a:hover {
+      opacity: 1;
+      color: #63b3ed;
+    }
   }
 </style>
