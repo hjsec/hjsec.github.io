@@ -43,14 +43,25 @@ const { src = '/astronaut-hero-img.webp' }: Props = Astro.props
           </Link>
         </div>
       </div>
-      <!-- 宇航员图片在所有屏幕上都显示，手机端放在文字下方 -->
       <Image class="mx-auto w-3/4 lg:w-full" src={src} alt="" decoding="async" width={800} height={600} loading="eager" />
     </div>
   </div>
 </section>
 
-<style lang="scss">
+<style lang="scss" is:global>
   h1 {
     text-wrap: unset;
   }
 
+  /* 强制彩色渐变，任何情况下都不被覆盖 */
+  .text-gradient {
+    background: linear-gradient(
+      315deg,
+      #63b3ed 25%,
+      #b794f4 100%
+    ) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+</style>
