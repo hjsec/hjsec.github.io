@@ -1,13 +1,12 @@
 ---
 import DefaultLayout from '@layouts/DefaultLayout.astro'
 import Hero from '@components/Hero.astro'
-import Feature from '@components/Feature.astro'
 ---
 
 <DefaultLayout title="花江安全局" useTitleTemplate={false}>
   <Hero />
 
-  <!-- 宣传图片展示（放在特色卡片前面） -->
+  <!-- 宣传图片展示（我们的身影） -->
   <section class="mb-24">
     <div class="container">
       <h2 class="text-center text-3xl font-bold mb-12">我们的身影</h2>
@@ -28,18 +27,3 @@ import Feature from '@components/Feature.astro'
     </div>
   </section>
 
-  <!-- 特色卡片 -->
-  <section class="mb-24">
-    <div class="container grid gap-6 md:grid-cols-3">
-      <Feature icon="lucide:binary" title="二进制安全" level="h2">
-        栈溢出、堆利用、内核安全，用漏洞挖掘数字世界的基石。
-      </Feature>
-      <Feature icon="lucide:flag" title="CTF 竞赛" level="h2">
-        以赛代练，从校内选拔到全国决赛，用实力说话。
-      </Feature>
-      <Feature icon="lucide:users" title="招新与培训" level="h2">
-        零基础入门，学长带教，每周技术分享，快速成长。
-      </Feature>
-    </div>
-  </section>
-</DefaultLayout>
