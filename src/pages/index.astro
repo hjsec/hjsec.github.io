@@ -1,0 +1,26 @@
+---
+import DefaultLayout from '@layouts/DefaultLayout.astro'
+import Hero from '@components/Hero.astro'
+import Feature from '@components/Feature.astro'
+import FeaturedPosts from '@components/FeaturedPosts.astro'
+---
+
+<DefaultLayout title="花江安全局" useTitleTemplate={false}>
+  <Hero />
+
+  <section class="mb-24">
+    <div class="container grid gap-6 md:grid-cols-3">
+      <Feature icon="lucide:layout-template" title="从真实的结构开始" level="h2">
+        编辑 theme.config.ts，替换占位文字，围绕你的内容模型塑造网站。
+      </Feature>
+      <Feature icon="lucide:scissors" title="保留你需要的" level="h2">
+        本预设包含博客、作品集、联系表单和参考页面，方便你从丰富的起点开始裁剪。
+      </Feature>
+      <Feature icon="lucide:accessibility" title="无障碍构建" level="h2">
+        导航、颜色令牌、逻辑属性和易读的排版从一开始就已就绪。
+      </Feature>
+    </div>
+  </section>
+
+  <FeaturedPosts />
+</DefaultLayout>

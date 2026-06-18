@@ -1,0 +1,28 @@
+---
+import DefaultLayout from '@layouts/DefaultLayout.astro'
+import Hero from '@components/Hero.astro'
+import Feature from '@components/Feature.astro'
+import FeaturedPosts from '@components/FeaturedPosts.astro'
+import FeaturedProjects from '@components/FeaturedProjects.astro'
+---
+
+<DefaultLayout title="HJSec" useTitleTemplate={false}>
+  <Hero />
+
+  <section class="mb-24">
+    <div class="container grid gap-6 md:grid-cols-3">
+      <Feature icon="lucide:layout-template" title="Start with real structure" level="h2">
+        Edit theme.config.ts, replace placeholder copy, and shape the starter around your content model.
+      </Feature>
+      <Feature icon="lucide:scissors" title="Keep what you need" level="h2">
+        This preset includes the blog, portfolio, contact flow, and reference pages so you can trim from a rich base.
+      </Feature>
+      <Feature icon="lucide:accessibility" title="Build accessibly" level="h2">
+        Navigation, color tokens, logical properties, and readable typography are ready from the start.
+      </Feature>
+    </div>
+  </section>
+
+  <FeaturedPosts />
+  <FeaturedProjects />
+</DefaultLayout>

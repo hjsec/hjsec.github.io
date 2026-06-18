@@ -1,0 +1,104 @@
+---
+import DefaultLayout from '@layouts/DefaultLayout.astro'
+import PageHeader from '@components/PageHeader.astro'
+import SocialShares from '@components/SocialShares.astro'
+import { Heading } from 'accessible-astro-components'
+import { getCollection, render } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects')
+
+  const projectImages = [
+    { src: '/projects/project-image-1.png' },
+    { src: '/projects/project-image-2.png' },
+    { src: '/projects/project-image-3.png' },
+    { src: '/projects/project-image-4.png' },
+    { src: '/projects/project-image-5.png' },
+    { src: '/projects/project-image-6.png' },
+  ]
+
+  return projects.map((project, index) => {
+    const projectWithImage = {
+      ...project,
+      featuredImage: projectImages[index % projectImages.length].src,
+    }
+
+    return {
+      params: { project: project.id },
+      props: { project: projectWithImage },
+    }
+  })
+}
+
+interface Props {
+  project: CollectionEntry<'projects'> & { featuredImage: string }
+}
+
+const { project } = Astro.props
+const { Content } = await render(project)
+---
+
+<DefaultLayout title={project.data.title} description={project.data.description} url={`/portfolio/${project.id}`}>
+  <PageHeader
+    title={project.data.title}
+    subtitle={project.data.description}
+    bgType="bordered"
+    featuredImage={project.featuredImage}
+  />
+
+  <section class="my-12">
+    <div class="narrow space-content container">
+      <!-- 手动头像 + 格言 + 链接 -->
+      <div class="mb-10 flex flex-col items-center text-center">
+        {project.data.image && (
+          <img
+            src={project.data.image}
+            alt={project.data.title}
+            class="mb-6 h-32 w-32 rounded-full border-4 border-[var(--border-color-subtle)] object-cover shadow-lg"
+          />
+        )}
+        {project.data.motto && (
+          <blockquote class="mb-6 text-xl italic opacity-60">
+            “{project.data.motto}”
+          </blockquote>
+        )}
+        {project.data.links?.length > 0 && (
+          <div class="flex flex-wrap justify-center gap-3">
+            {project.data.links.map(link => {
+              const [key, value] = Object.entries(link)[0];
+              return (
+                <a
+                  href={value}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-full bg-[var(--color-primary)] px-5 py-2 text-white no-underline transition hover:opacity-80"
+                >
+                  {key}
+                </a>
+              );
+            })}
+          </div>
+        )}
+      </div>
+
+      <!-- Markdown 正文 -->
+      <Content />
+    </div>
+  </section>
+
+  <section class="my-12">
+    <div class="narrow space-content container">
+      <Heading level="h2">Share this project</Heading>
+      <p>Like this project? Share it with your network!</p>
+      <SocialShares />
+    </div>
+  </section>
+</DefaultLayout>
+
+<style lang="scss" is:global>
+  .narrow {
+    margin-inline: auto;
+    max-width: 65ch;
+  }
+</style>

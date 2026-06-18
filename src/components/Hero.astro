@@ -1,0 +1,73 @@
+---
+import { Link, Notification } from 'accessible-astro-components'
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
+
+/**
+ * Hero Component
+ *
+ * @description A component that displays a hero section with a title, description, and image
+ */
+interface Props {
+  /**
+   * The source URL for the image
+   */
+  src?: string
+}
+
+const { src = '/astronaut-hero-img.webp' }: Props = Astro.props
+---
+
+<section class="hero my-24">
+  <div class="container">
+    <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
+      <div class="flex flex-col items-center gap-8 md:items-start">
+        <h1 class="text-center text-6xl md:text-left lg:text-8xl"><span class="text-gradient">花江安全局</span></h1>
+
+        <p class="text-center text-2xl md:text-left">
+          专注于 Web 安全、二进制安全、逆向工程、CTF 竞赛。桂林电子科技大学计算机与信息安全学院大学生科技协会安全部别名花江安全局
+        </p>
+        <div class="flex flex-col gap-3 min-[500px]:flex-row">
+          <Link
+            href="https://github.com/incluud/accessible-astro-starter"
+            isButton
+            type="primary"
+            animateOnHover
+            animationType="boop"
+          >
+            <Icon aria-hidden="true" name="lucide:star" size="1.5rem" />
+            招新通知
+          </Link>
+          <Link
+            href="https://accessible-astro.incluud.dev/"
+            isButton
+            type="secondary"
+            animateOnHover
+            animationType="boop"
+          >
+            <Icon aria-hidden="true" name="lucide:bookmark" size="1.5rem" />
+            关于我们
+          </Link>
+        </div>
+      </div>
+      <Image class="hidden lg:block" src={src} alt="" decoding="async" width={800} height={600} loading="eager" />
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  h1 {
+    text-wrap: unset;
+  }
+
+  .text-gradient {
+    background: linear-gradient(
+      315deg,
+      light-dark(var(--color-primary-300), var(--color-secondary-100)) 25%,
+      light-dark(var(--color-secondary-300), var(--color-primary-200))
+    );
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
