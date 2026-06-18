@@ -1,42 +1,57 @@
 ---
 import DefaultLayout from '@layouts/DefaultLayout.astro'
 import PageHeader from '@components/PageHeader.astro'
-import { Form, Input, Button, Textarea, Heading, Link } from 'accessible-astro-components'
+import { Heading, Link } from 'accessible-astro-components'
 import { Icon } from 'astro-icon/components'
 ---
 
-<DefaultLayout title="Contact">
+<DefaultLayout title="加入我们 | 花江安全局">
   <PageHeader
-    title="Contact"
-    subtitle="Use this page as a starting point for contact forms, enquiries, bookings, or support."
+    title="加入我们"
+    subtitle="在二进制中寻找漏洞，在数字世界里找到我们。"
     bgType="gradient"
   />
   <section class="container my-16">
     <div class="grid grid-cols-1 gap-16 md:grid-cols-2">
+      <!-- 左侧：招新信息 -->
       <div class="space-content">
-        <Heading level="h2">Send a message</Heading>
-        <Form name="contact" action="/thank-you" method="post">
-          <Input name="name" label="Name" required autocomplete="name" />
-          <Input name="email" label="Email address" type="email" required autocomplete="email" />
-          <Textarea name="message" label="Message" required />
-          <Button htmlType="submit" type="primary">Send message</Button>
-        </Form>
+        <Heading level="h2">招新信息</Heading>
+        <p>
+          <strong>花江安全局</strong>（Huajiang Security，HJSec）隶属于桂林电子科技大学计算机与信息安全学院大学生科技协会，科协安全部。
+        </p>
+        <ul class="list-inside list-disc my-4 space-y-2">
+          <li><strong>面向对象</strong>：全校在校生，不限专业、不限年级</li>
+          <li><strong>基本要求</strong>：对信息安全有浓厚兴趣，具备或愿意学习基础编程（C/Python 等）</li>
+          <li><strong>方向选择</strong>：二进制安全 (Pwn)、逆向工程 (Reverse)、Web 安全、密码学 (Crypto)</li>
+        </ul>
+
+        <Heading level="h2">迎新靶场</Heading>
+        <div class="bg-[var(--background-color)] border border-[var(--border-color-subtle)] rounded-xl p-6 text-center mb-4">
+          <p class="text-lg mb-2">🚧 靶场正在搭建中，敬请期待 🚧</p>
+          <p class="text-sm opacity-70">届时将提供新手入门题目，完成挑战即可获得招新资格</p>
+        </div>
       </div>
+
+      <!-- 右侧：加入方式 -->
       <div class="space-content">
-        <Heading level="h2">Contact details</Heading>
-        <p>Replace these placeholders with your own email address, availability, and preferred contact channels.</p>
+        <Heading level="h2">加入方式</Heading>
+        <p>扫描下方二维码或搜索群号加入招新群，获取最新招新通知和靶场动态。</p>
+        
+        <div class="bg-[var(--background-color)] border border-[var(--border-color-subtle)] rounded-xl p-8 text-center my-6">
+          <p class="text-lg mb-2">招新 QQ 群</p>
+          <p class="text-3xl font-bold text-[var(--color-primary)] mb-2">123456789</p>
+          <p class="text-sm opacity-70">（请替换为你的实际群号）</p>
+        </div>
+
         <div class="gap-2xs flex items-center">
           <Icon aria-hidden="true" name="lucide:mail" size={20} class="shrink-0" />
           <p>
-            <span class="font-bold">Email:</span>
-            <Link href="mailto:hello@example.com">hello@example.com</Link>
-          </p>
         </div>
-        <div class="gap-2xs flex items-center">
+        <div class="gap-2xs flex items-center mt-2">
           <Icon aria-hidden="true" name="lucide:clock" size={20} class="shrink-0" />
           <p>
-            <span class="font-bold">Availability:</span>
-            Monday to Thursday, 9:00 to 17:00
+            <span class="font-bold">招新时间：</span>
+            每年秋季学期初（具体时间请关注群通知）
           </p>
         </div>
       </div>

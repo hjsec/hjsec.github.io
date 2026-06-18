@@ -1,24 +1,25 @@
 ---
-import DefaultLayout from './DefaultLayout.astro'
-import PageHeader from '@components/PageHeader.astro'
+import DefaultLayout from '@layouts/DefaultLayout.astro'
 
 const { frontmatter } = Astro.props
-const containerClass = frontmatter.narrow ? 'narrow container' : 'container'
-const pageHeader = frontmatter.pageHeader
 ---
 
-<DefaultLayout
-  title={frontmatter.title}
-  description={frontmatter.description}
-  image={frontmatter.image}
-  author={frontmatter.author}
-  type={frontmatter.type}
-  useTitleTemplate={frontmatter.useTitleTemplate}
->
-  {pageHeader && <PageHeader title={pageHeader.title} subtitle={pageHeader.subtitle} bgType={pageHeader.bgType} />}
-  <div class={containerClass}>
-    <div class="space-content my-12">
+<DefaultLayout title={frontmatter.title} description={frontmatter.description}>
+  <article class="narrow container my-12">
+    <h1 class="mb-6 text-4xl font-bold">{frontmatter.title}</h1>
+    <div class="prose max-w-none">
       <slot />
     </div>
-  </div>
+    <nav class="mt-12 flex justify-between border-t border-[var(--border-color-subtle)] pt-6">
+      {frontmatter.prev ? <a href={frontmatter.prev} class="text-[var(--color-primary)] no-underline hover:underline">&larr; 上一页</a> : <span />}
+      {frontmatter.next ? <a href={frontmatter.next} class="text-[var(--color-primary)] no-underline hover:underline">下一页 &rarr;</a> : <span />}
+    </nav>
+  </article>
 </DefaultLayout>
+
+<style>
+  .narrow {
+    max-width: 65ch;
+    margin-inline: auto;
+  }
+</style>

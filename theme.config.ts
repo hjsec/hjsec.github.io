@@ -29,8 +29,8 @@ export default defineThemeConfig({
       },
       {
         type: 'link',
-        label: '技术文章',
-        href: '/blog',
+        label: '关于我们',
+        href: '/about',
       },
       {
         type: 'link',
