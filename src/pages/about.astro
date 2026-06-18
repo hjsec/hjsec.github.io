@@ -3,58 +3,64 @@ import DefaultLayout from '@layouts/DefaultLayout.astro'
 import PageHeader from '@components/PageHeader.astro'
 ---
 
-<DefaultLayout title="关于我们 | 花江安全局" description="花江安全局 —— 桂林电子科技大学信息安全社团">
+<DefaultLayout title="关于我们 | 花江安全" description="花江安全 —— 桂林电子科技大学信息安全社团">
   <PageHeader
     title="关于我们"
-    subtitle="花江安全局"
+    subtitle="花江安全"
     bgType="bordered"
   />
 
   <!-- Logo 展示 -->
   <section class="mb-12">
     <div class="container flex justify-center">
-      <img src="/img/logo.jpg" alt="花江安全局 Logo" class="w-40 h-auto rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300" loading="lazy" />
+      <img src="/img/logo.jpg" alt="花江安全 Logo" class="w-40 h-auto rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300" loading="lazy" />
     </div>
   </section>
+
   <section class="my-12">
     <div class="narrow container">
       <p>
-        <strong>花江安全局</strong>（Huajiang Security，简称 HJSec）是桂林电子科技大学计算机与信息安全学院大学生科技协会下属的安全方向团队，由七星瓢虫工作坊、穿山甲、信息维护小组合并而成，于2025年正式组建为科协安全部。我们是一群纯粹的安全爱好者，痴迷于二进制漏洞、逆向工程、Web 攻防和密码学。在这里，没有条条框框，只有对技术极致的追求。
+        <strong>科协安全部</strong> 是桂林电子科技大学计算机与信息安全学院大学生科技协会下属的安全方向部门。我们还有一个更酷的别名——<strong>花江安全</strong>（Huajiang Security，简称 HJSec），这是我们对外展示的品牌名。
+      </p>
+      <p>
+        我们由七星瓢虫工作坊、穿山甲、信息维护小组于2025年合并组建而成，是一群痴迷于信息安全的大学生。有人整天追着最新的 Web 漏洞和渗透技巧，有人在二进制的世界里与汇编、堆栈斗智斗勇，还有人对逆向工程、密码学、安全开发充满狂热。无论你喜欢黑盒测试还是底层分析，安全部都有你的位置。没有条条框框，只有对技术极致的追求。
       </p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">我们的方向</h2>
       <ul class="list-inside list-disc my-4">
-        <li><strong>二进制安全 (Pwn)</strong>：栈溢出、堆利用、内核安全</li>
-        <li><strong>逆向工程 (Reverse)</strong>：固件分析、病毒逆向、二进制协议分析</li>
-        <li><strong>Web 安全</strong>：渗透测试、代码审计</li>
-        <li><strong>密码学 (Crypto)</strong>：古典密码、现代密码体制</li>
-        <li><strong>CTF 竞赛</strong>：以赛代练，在实战中成长</li>
+        <li><strong>Web 安全与渗透测试</strong>：漏洞挖掘、代码审计、SRC 实战，做一名真正的白帽子</li>
+        <li><strong>二进制安全 (Pwn)</strong>：栈溢出、堆利用、内核安全，享受控制程序执行流的快感</li>
+        <li><strong>逆向工程 (Reverse)</strong>：固件分析、病毒逆向、二进制协议分析，拆解一切黑箱</li>
+        <li><strong>密码学 (Crypto)</strong>：古典密码、现代密码体制，为安全提供数学根基</li>
+        <li><strong>CTF 竞赛</strong>：以赛代练，从校内选拔到全国决赛，用实力说话</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">我们的资源</h2>
+      <p>社团虽新，但起点很高。我们继承了七星瓢虫工作坊、穿山甲、信息维护小组的丰厚遗产，拥有：</p>
+      <ul class="list-inside list-disc my-4">
+        <li><strong>专属服务器</strong>：用于搭建靶场、部署实验环境、托管内部工具，告别“本地跑不动”的尴尬</li>
+        <li><strong>NAS 存储</strong>：共享学习资料、CTF 赛题归档、工具包，全社团无缝共享</li>
+        <li><strong>宽敞卡座</strong>：实验室提供大量卡座，双屏开发、熬夜调试、日常交流都有舒适空间</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">我们的足迹</h2>
       <p>
-        我们从零开始，在二进制安全、逆向工程和 CTF 竞赛中持续深耕。团队虽新，但每一位成员都在用漏洞和 exploit 书写自己的成长轨迹。我们相信，真正的安全能力来自于对底层的深刻理解和无数次调试后的顿悟。
+        我们从零开始，在信息安全多个领域持续深耕。团队虽新，但每一位成员都在用自己的方式成长：或是挖到第一个漏洞，或是在 CTF 中拿下一血，或是写出了第一篇技术分析文章。我们相信，真正的安全能力来自于对底层原理的深刻理解和对未知领域的不断探索。
       </p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">加入我们</h2>
       <p>
-        我们不是培训班，不是打卡社团。我们是一群愿意为调试一个段错误熬到凌晨的人。如果你也对栈、堆、汇编、shellcode 这些词有本能的兴奋，花江安全局就是你的归宿。
+        我们不是培训班，不是打卡社团。我们是一群愿意为调试一个段错误熬到凌晨的人，也是一群为了复现一个最新漏洞而兴奋不已的人。如果你也对攻防对抗、漏洞挖掘、二进制或 Web 安全有本能的兴奋，安全部就是你的归宿。
       </p>
       <p class="text-xl font-bold text-center my-8">
         在二进制中寻找漏洞，在数字世界里找到我们。
       </p>
       <p class="text-center">
-        期待志同道合的你，加入花江安全局。
+        期待志同道合的你，加入科协安全部——花江安全。
       </p>
     </div>
   </section>
 
-  <!-- Logo 展示 -->
-  <section class="mb-12">
-    <div class="container flex justify-center">
-      <img src="/img/logo.jpg" alt="花江安全局 Logo" class="w-40 h-auto rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300" loading="lazy" />
-    </div>
-  </section>
   <section class="my-12">
     <div class="narrow container">
       <h2 class="text-2xl font-bold mb-4">知识库 / 科普</h2>
