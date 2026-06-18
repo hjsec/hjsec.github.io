@@ -34,7 +34,7 @@ const { page } = Astro.props
             .sort(([a], [b]) => {
               const numA = parseInt(a) || 0
               const numB = parseInt(b) || 0
-              return numB - numA
+              return numA - numB
             })
             .map(([grade, projectsInGrade]) => (
               <div class="mb-12">
