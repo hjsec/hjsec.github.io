@@ -41,6 +41,16 @@ const { src = '/astronaut-hero-img.webp' }: Props = Astro.props
             <Icon aria-hidden="true" name="lucide:bookmark" size="1.5rem" />
             关于我们
           </Link>
+          <Link
+            href="/portfolio"
+            isButton
+            type="secondary"
+            animateOnHover
+            animationType="boop"
+          >
+            <Icon aria-hidden="true" name="lucide:users" size="1.5rem" />
+            团队成员
+          </Link>
         </div>
       </div>
       <Image class="mx-auto w-3/4 lg:w-full" src={src} alt="" decoding="async" width={800} height={600} loading="eager" />
