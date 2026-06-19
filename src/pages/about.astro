@@ -2,7 +2,7 @@
 import DefaultLayout from '@layouts/DefaultLayout.astro'
 ---
 
-<DefaultLayout title="关于我们 | 花江安全" description="花江安全 —— 桂林电子科技大学网络安全社团">
+<DefaultLayout class="about-page" title="关于我们 | 花江安全" description="花江安全 —— 桂林电子科技大学网络安全社团">
   <!-- 标题与 Logo 并排区域 -->
   <section class="my-12">
     <div class="container">
@@ -18,41 +18,51 @@ import DefaultLayout from '@layouts/DefaultLayout.astro'
 
   <section class="my-12">
     <div class="narrow container">
+      <!-- 总述 -->
       <p>
         <strong>科协安全部</strong> 是桂林电子科技大学计算机与信息安全学院大学生科技协会下属的安全方向部门。我们还有一个更酷的别名——<strong>花江安全</strong>（Huajiang Security，简称 HJSec），这是我们对外展示的品牌名。
       </p>
       <p>
-        我们由七星瓢虫工作坊、穿山甲、信息维护小组于2025年合并组建而成，是一群痴迷于网络安全的同学。有人整天追着最新的 Web 漏洞和渗透技巧，有人在二进制的世界里与汇编、堆栈斗智斗勇，还有人对逆向工程、密码学、安全开发充满狂热。无论你喜欢黑盒测试还是底层分析，安全部都有你的位置。没有条条框框，只有对技术极致的追求。
+        我们社团由七星瓢虫工作坊，信息安全维护小组，穿山甲安全纵队于2025年合并组建而成，是一群痴迷于网络安全的同学。有喜欢天天挖 SRC 漏洞学习渗透技巧的 Web 手，也有在二进制世界做游戏逆向（包括外挂和反外挂）、病毒分析、漏洞利用的计算机底层爱好者。社团氛围很好，老资历经常水群，现任部长甘部长还会给成员带零食，学长学姐在群里给你期末复习资料和学习资料。
+      </p>
+      <p>
+        我们大一大二以打 CTF 比赛为主，还有打红蓝攻防，比如各种护网比赛。
       </p>
       <p class="text-center font-bold mt-4">
         📍 地址：桂林电子科技大学花江校区第五教学楼5111
       </p>
 
+      <!-- 我们的方向 -->
       <h2 class="text-2xl font-bold mt-8 mb-4">我们的方向</h2>
-      <ul class="list-inside list-disc my-4">
+      <ul class="list-inside list-disc my-4 space-y-2">
         <li><strong>Web 安全与渗透测试</strong>：漏洞挖掘、代码审计、SRC 实战，做一名真正的白帽子</li>
         <li><strong>二进制安全 (Pwn)</strong>：栈溢出、堆利用、内核安全，享受控制程序执行流的快感</li>
         <li><strong>逆向工程 (Reverse)</strong>：固件分析、病毒逆向、二进制协议分析，拆解一切黑箱</li>
         <li><strong>密码学 (Crypto)</strong>：古典密码、现代密码体制，为安全提供数学根基</li>
+        <li><strong>MISC / 流量分析 / 取证</strong></li>
         <li><strong>CTF 竞赛</strong>：以赛代练，从校内选拔到全国决赛，用实力说话</li>
+        <li><strong>进阶 AWD 攻防赛</strong></li>
       </ul>
 
+      <!-- 我们的资源 -->
       <h2 class="text-2xl font-bold mt-8 mb-4">我们的资源</h2>
-      <p>社团虽新，但起点很高。我们继承了七星瓢虫工作坊、穿山甲、信息维护小组的丰厚遗产，拥有：</p>
-      <ul class="list-inside list-disc my-4">
-        <li><strong>专属服务器</strong>：用于搭建靶场、部署实验环境、托管内部工具，告别“本地跑不动”的尴尬</li>
+      <p>由于我们是 25 年大概 6 月才合并成立的，社团很新，但起点很高。我们继承了之前三个安全社团七星瓢虫工作坊、穿山甲安全纵队、信息安全维护小组的丰厚遗产，拥有：</p>
+      <ul class="list-inside list-disc my-4 space-y-2">
         <li><strong>NAS 存储</strong>：共享学习资料、CTF 赛题归档、工具包，全社团无缝共享</li>
-        <li><strong>宽敞卡座</strong>：实验室提供大量卡座，双屏开发、熬夜调试、日常交流都有舒适空间</li>
+        <li><strong>宽敞卡座</strong>：5111 科协安全部提供大量卡座，离宿舍近，日常交流都有舒适空间</li>
+        <li>作为科协的一个部门，有科协的资源</li>
       </ul>
 
+      <!-- 我们的足迹 -->
       <h2 class="text-2xl font-bold mt-8 mb-4">我们的足迹</h2>
       <p>
         我们从零开始，在网络安全多个领域持续深耕。团队虽新，但每一位成员都在用自己的方式成长：或是挖到第一个漏洞，或是在 CTF 中拿下一血，或是写出了第一篇技术分析文章。我们相信，真正的安全能力来自于对底层原理的深刻理解和对未知领域的不断探索。
       </p>
 
+      <!-- 加入我们 -->
       <h2 class="text-2xl font-bold mt-8 mb-4">加入我们</h2>
       <p>
-        我们不是培训班，不是打卡社团。我们是一群愿意为调试一个段错误熬到凌晨的人，也是一群为了复现一个最新漏洞而兴奋不已的人。如果你也对攻防对抗、漏洞挖掘、二进制或 Web 安全有本能的兴奋，安全部就是你的归宿。
+        我们不是培训班，不是娱乐社团，也不是学生会团委等行政部门，我们是以安全学习为主的科技社团。如果你也对攻防对抗、漏洞挖掘、二进制或 Web 安全有本能的兴奋，安全部就是你的归宿。
       </p>
       <p class="text-xl font-bold text-center my-8">
         在二进制中寻找漏洞，在数字世界里找到我们。
@@ -63,11 +73,12 @@ import DefaultLayout from '@layouts/DefaultLayout.astro'
     </div>
   </section>
 
+  <!-- 知识库 -->
   <section class="my-12">
     <div class="narrow container">
       <h2 class="text-2xl font-bold mb-4">知识库 / 科普</h2>
       <p>这里会持续更新安全方向的基础知识、学习路线和工具教程，帮助新人快速入门。</p>
-      <ul class="list-inside list-disc my-4">
+      <ul class="list-inside list-disc my-4 space-y-2">
         <li><a href="https://ctf-wiki.org/" target="_blank" rel="noopener">CTF Wiki —— 全面的 CTF 知识库</a></li>
         <li><a href="https://github.com/Naetw/CTF-pwn-tips" target="_blank" rel="noopener">CTF Pwn Tips</a></li>
         <li><a href="https://www.bilibili.com/video/BV1x7411y7Qq" target="_blank" rel="noopener">二进制安全入门教程</a></li>

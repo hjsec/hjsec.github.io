@@ -1,11 +1,9 @@
 ---
 import DefaultLayout from '@layouts/DefaultLayout.astro'
 import PageHeader from '@components/PageHeader.astro'
-import { Heading, Link } from 'accessible-astro-components'
-import { Icon } from 'astro-icon/components'
 ---
 
-<DefaultLayout title="加入我们 | 花江安全">
+<DefaultLayout class="contact-page" title="加入我们 | 花江安全">
   <PageHeader
     title="加入我们"
     subtitle="在二进制中寻找漏洞，在数字世界里找到我们。"
@@ -15,44 +13,38 @@ import { Icon } from 'astro-icon/components'
     <div class="grid grid-cols-1 gap-16 md:grid-cols-2">
       <!-- 左侧：招新信息 -->
       <div class="space-content">
-        <Heading level="h2">招新信息</Heading>
         <p>
-          <strong>花江安全</strong>（Huajiang Security，HJSec）隶属于桂林电子科技大学计算机与信息安全学院大学生科技协会，科协安全部。
+          <strong>花江安全</strong>（Huajiang Security，HJSec）隶属于桂林电子科技大学计算机与信息安全学院大学生科技协会，为科协安全部，招新由科协统筹进行。
         </p>
+
+        <h2 class="text-2xl font-bold mt-8 mb-4">招新信息</h2>
         <ul class="list-inside list-disc my-4 space-y-2">
-          <li><strong>面向对象</strong>：全校在校生，不限专业、不限年级</li>
-          <li><strong>基本要求</strong>：对信息安全有浓厚兴趣，具备或愿意学习基础编程（C/Python 等）</li>
-          <li><strong>方向选择</strong>：二进制安全 (Pwn)、逆向工程 (Reverse)、Web 安全、密码学 (Crypto)</li>
+          <li><strong>面向对象</strong>：全校在校生，不限专业，热烈欢迎大一新生</li>
+          <li><strong>基本要求</strong>：对信息安全有浓厚兴趣，具备或愿意学习网络安全有关知识，对黑客技术有热情</li>
+          <li><strong>方向选择</strong>：二进制安全 (Pwn)、逆向工程 (Reverse)、Web 安全、密码学 (Crypto)、MISC</li>
         </ul>
 
-        <Heading level="h2">迎新靶场</Heading>
-        <div class="bg-[var(--background-color)] border border-[var(--border-color-subtle)] rounded-xl p-6 text-center mb-4">
-          <p class="text-lg mb-2">🚧 靶场正在搭建中，敬请期待 🚧</p>
-          <p class="text-sm opacity-70">届时将提供新手入门题目，完成挑战即可获得招新资格</p>
-        </div>
+        <h2 class="text-2xl font-bold mt-8 mb-4">招新历程</h2>
+        <ol class="list-inside list-decimal my-4 space-y-2">
+          <li><strong>新生开学前</strong>：迎新靶场（线上热身）</li>
+          <li><strong>开学到校后</strong>：新生招新赛（实战选拔）</li>
+          <li><strong>面试</strong>：双向选择，正式加入</li>
+        </ol>
       </div>
 
-      <!-- 右侧：加入方式 -->
+      <!-- 右侧：迎新靶场 & 加入方式 -->
       <div class="space-content">
-        <Heading level="h2">加入方式</Heading>
-        <p>扫描下方二维码或搜索群号加入招新群，获取最新招新通知和靶场动态。</p>
-        
-        <div class="bg-[var(--background-color)] border border-[var(--border-color-subtle)] rounded-xl p-8 text-center my-6">
-          <p class="text-lg mb-2">招新 QQ 群</p>
-          <p class="text-3xl font-bold text-[var(--color-primary)] mb-2">123456789</p>
-          <p class="text-sm opacity-70">（请替换为你的实际群号）</p>
+        <h2 class="text-2xl font-bold mt-8 mb-4">迎新靶场</h2>
+        <div class="bg-[var(--background-color)] border border-[var(--border-color-subtle)] rounded-xl p-6 text-center mb-4">
+          <p class="text-lg mb-2">🚧 靶场正在搭建中，敬请期待 🚧</p>
+          <p class="text-sm opacity-70">帮助新生熟悉 CTF，为招新赛热身</p>
         </div>
 
-        <div class="gap-2xs flex items-center">
-          <Icon aria-hidden="true" name="lucide:mail" size={20} class="shrink-0" />
-          <p>
-        </div>
-        <div class="gap-2xs flex items-center mt-2">
-          <Icon aria-hidden="true" name="lucide:clock" size={20} class="shrink-0" />
-          <p>
-            <span class="font-bold">招新时间：</span>
-            每年秋季学期初（具体时间请关注群通知）
-          </p>
+        <h2 class="text-2xl font-bold mt-8 mb-4">加入方式</h2>
+        <div class="bg-[var(--background-color)] border border-[var(--border-color-subtle)] rounded-xl p-6 text-center">
+          <p class="text-lg mb-2">招新 QQ 群</p>
+          <p class="text-3xl font-bold text-[var(--color-primary)]">123456789</p>
+          <p class="text-sm opacity-70 mt-2">（请替换为你的实际群号）</p>
         </div>
       </div>
     </div>
