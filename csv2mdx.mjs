@@ -49,7 +49,7 @@ title: "${name}"
 author: "花江安全局"
 description: "${bio}"
 tags: ["${grade}级"]
-image: "/img/${id}.jpeg"
+image: "/img/${id}.jpg"
 motto: "${motto || ''}"
 ${linksYaml}
 ---`;
