@@ -339,3 +339,56 @@
   background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
 }
+
+// =====================================================
+// 移动端优化 (屏幕宽度 < 768px)
+// =====================================================
+@media (max-width: 767px) {
+  // 关于我们 & 加入我们：标题缩小，内边距增加
+  .about-page h1,
+  .contact-page h1 {
+    font-size: 2.2rem !important;
+    line-height: 1.2;
+  }
+  .about-page .container,
+  .contact-page .container {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  // 段落和列表项增加行间距，更易读
+  .about-page p,
+  .contact-page p,
+  .about-page li,
+  .contact-page li {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  // 二级标题缩小
+  .about-page h2,
+  .contact-page h2 {
+    font-size: 1.5rem;
+  }
+
+  // 成员列表：卡片间距微调
+  .portfolio-page .grid {
+    gap: 1rem;
+  }
+  .portfolio-page .card {
+    padding: 1.25rem;
+  }
+
+  // 页脚：三列变一列，文字居中
+  footer .grid {
+    text-align: center;
+  }
+  footer ul {
+    justify-content: center;
+  }
+
+  // Hero 按钮在小屏幕上堆叠时增加间距
+  .hero .flex-col {
+    gap: 0.75rem;
+  }
+}
