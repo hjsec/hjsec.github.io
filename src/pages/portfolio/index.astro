@@ -1,30 +1,26 @@
 ---
 import DefaultLayout from '@layouts/DefaultLayout.astro'
-import PageHeader from '@components/PageHeader.astro'
 import { Card, Pagination } from 'accessible-astro-components'
 import { getCollection } from 'astro:content'
 
-export async function getStaticPaths({ paginate }) {
-  const projects = await getCollection('projects')
-  return paginate(projects, { pageSize: 8 })
-}
-
-const { page } = Astro.props
+// 获取全部成员，不分页
+const projects = await getCollection('projects')
 ---
 
-<DefaultLayout title="成员 | 花江安全">
-  <PageHeader
-    title="成员"
-    subtitle="团队成员"
-    bgType="gradient"
-  />
+<DefaultLayout title="团队成员 | 花江安全">
+  <!-- 彩色标题区 -->
+  <section class="my-12 text-center">
+    <h1 style="background: linear-gradient(315deg, #63b3ed, #b794f4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size: 3rem; font-weight: bold;">团队成员</h1>
+    <p style="font-size: 1.5rem; opacity: 0.8; color: #4a5568;">花江安全</p>
+  </section>
+
   <section class="my-12">
     <div class="container">
-      <p class="text-sm mb-6"><em>共 {page.total} 位成员，当前第 {page.currentPage} 页</em></p>
-      {page.data.length > 0 ? (
+      <p class="text-sm mb-6"><em>共 {projects.length} 位成员</em></p>
+      {projects.length > 0 ? (
         <div>
           {Object.entries(
-            page.data.reduce((acc, project) => {
+            projects.reduce((acc, project) => {
               const grade = project.data.tags?.find(tag => tag.endsWith('级')) || '其他'
               if (!acc[grade]) acc[grade] = []
               acc[grade].push(project)
@@ -92,19 +88,7 @@ const { page } = Astro.props
       ) : (
         <p>暂无成员</p>
       )}
-      {page.lastPage > 1 && (
-        <div class="mt-12 grid place-content-center">
-          <Pagination
-            firstPage={page.url.prev ? '/portfolio' : null}
-            previousPage={page.url.prev ?? null}
-            nextPage={page.url.next ?? null}
-            lastPage={page.url.next ? `/portfolio/${page.lastPage}` : null}
-            currentPage={`${page.currentPage}`}
-            totalPages={`${page.lastPage}`}
-            ariaLabel="成员分页"
-          />
-        </div>
-      )}
+      <!-- 彻底移除分页导航 -->
     </div>
   </section>
 </DefaultLayout>
