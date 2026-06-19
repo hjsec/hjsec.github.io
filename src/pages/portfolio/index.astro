@@ -1,18 +1,13 @@
 ---
 import DefaultLayout from '@layouts/DefaultLayout.astro'
-import { Card, Pagination } from 'accessible-astro-components'
+import PageHeader from '@components/PageHeader.astro'
 import { getCollection } from 'astro:content'
 
-// 获取全部成员，不分页
 const projects = await getCollection('projects')
 ---
 
 <DefaultLayout title="团队成员 | 花江安全">
-  <!-- 彩色标题区 -->
-  <section class="my-12 text-center">
-    <h1 style="background: linear-gradient(315deg, #63b3ed, #b794f4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size: 3rem; font-weight: bold;">团队成员</h1>
-    <p style="font-size: 1.5rem; opacity: 0.8; color: #4a5568;">花江安全</p>
-  </section>
+  <PageHeader title="团队成员" subtitle="花江安全" bgType="gradient" />
 
   <section class="my-12">
     <div class="container">
@@ -88,7 +83,6 @@ const projects = await getCollection('projects')
       ) : (
         <p>暂无成员</p>
       )}
-      <!-- 彻底移除分页导航 -->
     </div>
   </section>
 </DefaultLayout>
