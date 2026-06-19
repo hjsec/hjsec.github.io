@@ -1,19 +1,18 @@
 ---
 import DefaultLayout from '@layouts/DefaultLayout.astro'
-import PageHeader from '@components/PageHeader.astro'
 ---
 
 <DefaultLayout title="关于我们 | 花江安全" description="花江安全 —— 桂林电子科技大学信息安全社团">
-  <PageHeader
-    title="关于我们"
-    subtitle="花江安全"
-    bgType="bordered"
-  />
-
-  <!-- Logo 展示 -->
-  <section class="mb-12">
-    <div class="container flex justify-center">
-      <img src="/img/logo.jpg" alt="花江安全 Logo" class="w-40 h-auto rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300" loading="lazy" />
+  <!-- 自定义标题区域：左侧“关于我们”，右侧 Logo -->
+  <section class="my-12">
+    <div class="container">
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-6">
+        <div>
+          <h1 class="text-4xl font-bold mb-2">关于我们</h1>
+          <p class="text-xl opacity-80">花江安全</p>
+        </div>
+        <img src="/img/logo.jpg" alt="花江安全 Logo" class="w-32 h-auto rounded-2xl shadow-lg" />
+      </div>
     </div>
   </section>
 
@@ -24,6 +23,9 @@ import PageHeader from '@components/PageHeader.astro'
       </p>
       <p>
         我们由七星瓢虫工作坊、穿山甲、信息维护小组于2025年合并组建而成，是一群痴迷于信息安全的大学生。有人整天追着最新的 Web 漏洞和渗透技巧，有人在二进制的世界里与汇编、堆栈斗智斗勇，还有人对逆向工程、密码学、安全开发充满狂热。无论你喜欢黑盒测试还是底层分析，安全部都有你的位置。没有条条框框，只有对技术极致的追求。
+      </p>
+      <p class="text-center font-bold mt-4">
+        📍 地址：桂林电子科技大学花江校区第五教学楼5111
       </p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">我们的方向</h2>
