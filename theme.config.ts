@@ -42,6 +42,10 @@ export default defineThemeConfig({
         type: 'dropdown',
         items: [
           {
+            label: '知识库首页',
+            href: '/blog',
+          },
+          {
             label: '什么是 CTF？',
             href: '/blog/what-is-ctf',
           },
