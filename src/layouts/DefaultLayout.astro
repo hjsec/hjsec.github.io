@@ -5,7 +5,7 @@ import themeConfig from '@theme-config'
 import { SEO } from 'astro-seo'
 import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
-
+import { ClientRouter } from 'astro:transitions'
 import type { ImageMetadata } from 'astro'
 
 interface Props {
@@ -59,7 +59,6 @@ const imageUrl = new URL(imagePath, Astro.site).href
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <meta name="google-site-verification" content="ur25qBeKyF6RIfNxQ_bs1h22JTL3SUf_1U5U3gcXGAo" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
@@ -117,6 +116,7 @@ const imageUrl = new URL(imagePath, Astro.site).href
     />
 
     <!-- Enable Astro View Transitions for all browsers -->
+    <ClientRouter />
     <link rel="stylesheet" href="/mouse-effects.css" />
   </head>
   <body>
