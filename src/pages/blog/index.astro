@@ -1,29 +1,53 @@
 ---
 import DefaultLayout from '@layouts/DefaultLayout.astro'
-import PageHeader from '@components/PageHeader.astro'
 ---
 
-<DefaultLayout title="知识库 | 花江安全" description="了解CTF和安全方向的入门知识">
-  <PageHeader
-    title="知识库"
-    subtitle="从这里开始你的信息安全之旅"
-    bgType="bordered"
-  />
-
+<DefaultLayout title="知识库 | 花江安全">
   <section class="my-12">
-    <div class="container grid gap-6 md:grid-cols-3">
-      <a href="/blog/what-is-ctf" class="group rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 no-underline shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-        <h2 class="mb-3 text-2xl font-bold text-[var(--foreground-color)]">什么是 CTF？</h2>
-        <p class="text-[var(--foreground-color)] opacity-80">CTF（夺旗赛）是信息安全竞赛的简称，了解它的基本模式和魅力。</p>
-      </a>
-      <a href="/blog/security-fields" class="group rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 no-underline shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-        <h2 class="mb-3 text-2xl font-bold text-[var(--foreground-color)]">安全方向简介</h2>
-        <p class="text-[var(--foreground-color)] opacity-80">Web、Pwn、Reverse、Crypto…… 找到你感兴趣的方向。</p>
-      </a>
-      <a href="/blog/learning-path" class="group rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 no-underline shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-        <h2 class="mb-3 text-2xl font-bold text-[var(--foreground-color)]">学习路线</h2>
-        <p class="text-[var(--foreground-color)] opacity-80">从零开始，一步步成为安全高手。</p>
-      </a>
+    <div class="container">
+      <h1 class="text-4xl font-bold text-center mb-4">📚 知识库 / 科普</h1>
+      <p class="text-xl text-center opacity-80 mb-12">
+        这里会持续更新安全方向的基础知识、学习路线和工具教程，帮助新人快速入门。
+      </p>
+
+      <!-- 科普文章卡片 -->
+      <div class="grid gap-6 md:grid-cols-3 mb-16">
+        <a href="/blog/what-is-ctf" class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 no-underline shadow-sm hover:shadow-lg transition">
+          <h2 class="text-2xl font-bold mb-3">什么是 CTF？</h2>
+          <p class="opacity-80 mb-4">了解信息安全竞赛的基本概念和魅力。</p>
+          <span class="text-[var(--color-primary)] font-semibold">开始了解 →</span>
+        </a>
+        <a href="/blog/security-fields" class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 no-underline shadow-sm hover:shadow-lg transition">
+          <h2 class="text-2xl font-bold mb-3">安全方向简介</h2>
+          <p class="opacity-80 mb-4">Web、Pwn、Reverse…… 找到你感兴趣的方向。</p>
+          <span class="text-[var(--color-primary)] font-semibold">选择方向 →</span>
+        </a>
+        <a href="/blog/learning-path" class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 no-underline shadow-sm hover:shadow-lg transition">
+          <h2 class="text-2xl font-bold mb-3">学习路线</h2>
+          <p class="opacity-80 mb-4">从零开始，一步步成为安全高手。</p>
+          <span class="text-[var(--color-primary)] font-semibold">查看路线 →</span>
+        </a>
+      </div>
+
+      <!-- 资源链接 + 招新引导 -->
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm">
+          <h2 class="text-xl font-bold mb-4">🔗 常用资源</h2>
+          <ul class="space-y-2">
+            <li><a href="https://ctf-wiki.org/" target="_blank" rel="noopener" class="text-[var(--color-primary)] hover:underline">CTF Wiki</a></li>
+            <li><a href="https://github.com/Naetw/CTF-pwn-tips" target="_blank" rel="noopener" class="text-[var(--color-primary)] hover:underline">CTF Pwn Tips</a></li>
+            <li><a href="https://www.bilibili.com/video/BV1x7411y7Qq" target="_blank" rel="noopener" class="text-[var(--color-primary)] hover:underline">二进制安全入门教程</a></li>
+            <li><a href="/blog/resource" class="text-[var(--color-primary)] hover:underline">更多资源 →</a></li>
+          </ul>
+        </div>
+        <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm">
+          <h2 class="text-xl font-bold mb-4">🎯 准备加入我们？</h2>
+          <p class="opacity-80 mb-4">迎新靶场即将上线，招新群已开放。来这里找到组织，和学长学姐一起打 CTF。</p>
+          <a href="/contact" class="inline-block rounded-full bg-[var(--color-primary)] px-6 py-2.5 text-white font-semibold no-underline hover:opacity-90 transition shadow-md">
+            查看加入方式
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 </DefaultLayout>

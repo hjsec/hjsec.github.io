@@ -13,47 +13,101 @@ import PageHeader from '@components/PageHeader.astro'
     <div class="grid grid-cols-1 gap-16 md:grid-cols-2">
       <!-- 左侧：招新信息 -->
       <div class="space-content">
-        <p>
+        <p class="text-lg mb-6">
           <strong>花江安全</strong>（Huajiang Security，HJSec）隶属于桂林电子科技大学计算机与信息安全学院大学生科技协会，为科协安全部，招新由科协统筹进行。
         </p>
 
-        <h2 class="text-2xl font-bold mt-8 mb-4">我们是谁</h2>
-        <p>
-          我们不是培训班，不是娱乐社团，也不是学生会团委等行政部门，我们是以安全学习为主的科技社团。如果你也对攻防对抗、漏洞挖掘、二进制或 Web 安全有本能的兴奋，安全部就是你的归宿。
-        </p>
+        <!-- 我们是谁卡片 -->
+        <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm mb-8">
+          <h2 class="text-xl font-bold mb-3 flex items-center gap-2">
+            <span>🧩</span> 我们是谁
+          </h2>
+          <p class="opacity-90">
+            我们不是培训班，不是娱乐社团，也不是学生会团委等行政部门，我们是以安全学习为主的科技社团。如果你也对攻防对抗、漏洞挖掘、二进制或 Web 安全有本能的兴奋，安全部就是你的归宿。
+          </p>
+        </div>
 
-        <h2 class="text-2xl font-bold mt-8 mb-4">招新信息</h2>
-        <ul class="list-inside list-disc my-4 space-y-2">
-          <li><strong>面向对象</strong>：全校在校生，不限专业，热烈欢迎大一新生</li>
-          <li><strong>基本要求</strong>：对信息安全有浓厚兴趣，具备或愿意学习网络安全有关知识，对黑客技术有热情</li>
-          <li><strong>方向选择</strong>：二进制安全 (Pwn)、逆向工程 (Reverse)、Web 安全、密码学 (Crypto)、MISC</li>
-        </ul>
+        <!-- 招新信息卡片 -->
+        <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm mb-8">
+          <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+            <span>📋</span> 招新信息
+          </h2>
+          <ul class="list-inside list-disc my-4 space-y-3">
+            <li><strong>面向对象</strong>：全校在校生，不限专业，热烈欢迎大一新生</li>
+            <li><strong>基本要求</strong>：对信息安全有浓厚兴趣，具备或愿意学习网络安全有关知识，对黑客技术有热情</li>
+            <li><strong>方向选择</strong>：二进制安全 (Pwn)、逆向工程 (Reverse)、Web 安全、密码学 (Crypto)、MISC</li>
+          </ul>
+        </div>
 
-        <h2 class="text-2xl font-bold mt-8 mb-4">招新历程</h2>
-        <ol class="list-inside list-decimal my-4 space-y-2">
-          <li><strong>迎新赛：8月（新生入学前）</strong>：在家打迎新靶场，学习 CTF 基础知识，对安全世界有个初步了解</li>
-          <li><strong>招新赛：9月（开学后）</strong>：新生招新赛，通过题目观察成员表现。迎新靶场不会关闭，新生可以随时向学长学姐请教</li>
-          <li><strong>面试：10月底</strong>：双向选择，正式成为花江安全的一员</li>
-        </ol>
+        <!-- 招新历程：时间线样式 -->
+        <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm">
+          <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+            <span>🗺️</span> 招新历程
+          </h2>
+          <div class="space-y-6">
+            <!-- 步骤1 -->
+            <div class="flex gap-4">
+              <div class="flex flex-col items-center">
+                <div class="w-10 h-10 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center font-bold text-sm">1</div>
+                <div class="w-0.5 h-full bg-[var(--border-color-subtle)] mt-2"></div>
+              </div>
+              <div class="pb-6">
+                <h3 class="font-bold text-lg">迎新赛：8月（新生入学前）</h3>
+                <p class="opacity-80">在家打迎新靶场，学习 CTF 基础知识，对安全世界有个初步了解</p>
+              </div>
+            </div>
+            <!-- 步骤2 -->
+            <div class="flex gap-4">
+              <div class="flex flex-col items-center">
+                <div class="w-10 h-10 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center font-bold text-sm">2</div>
+                <div class="w-0.5 h-full bg-[var(--border-color-subtle)] mt-2"></div>
+              </div>
+              <div class="pb-6">
+                <h3 class="font-bold text-lg">招新赛：9月（开学后）</h3>
+                <p class="opacity-80">新生招新赛，通过题目观察成员表现。迎新靶场不会关闭，新生可以随时向学长学姐请教</p>
+              </div>
+            </div>
+            <!-- 步骤3 -->
+            <div class="flex gap-4">
+              <div class="flex flex-col items-center">
+                <div class="w-10 h-10 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center font-bold text-sm">3</div>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg">面试：10月底</h3>
+                <p class="opacity-80">双向选择，正式成为花江安全的一员</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- 右侧：迎新靶场 & 加入方式 -->
       <div class="space-content">
-        <h2 class="text-2xl font-bold mt-8 mb-4">迎新靶场</h2>
-        <div class="bg-[var(--background-color)] border border-[var(--border-color-subtle)] rounded-xl p-6 text-center mb-4">
+        <!-- 迎新靶场 -->
+        <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm mb-8 text-center">
+          <h2 class="text-xl font-bold mb-4 flex items-center justify-center gap-2">
+            <span>🎯</span> 迎新靶场
+          </h2>
           <p class="text-lg mb-2">🚧 靶场正在搭建中，敬请期待 🚧</p>
           <p class="text-sm opacity-70">帮助新生熟悉 CTF，为招新赛热身</p>
         </div>
 
-        <h2 class="text-2xl font-bold mt-8 mb-4">加入方式</h2>
-        <div class="bg-[var(--background-color)] border border-[var(--border-color-subtle)] rounded-xl p-6 text-center">
-          <p class="text-lg mb-2">招新 QQ 群</p>
-          <p class="text-3xl font-bold text-[var(--color-primary)]">995962963</p>
-          <img src="/img/recruitment.png" alt="招新群二维码" class="mx-auto my-4 w-48 h-auto rounded-xl shadow-md" loading="lazy" />
-          <a href="https://qm.qq.com/q/5pvaUJFYXu" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 rounded-full bg-[var(--color-primary)] px-6 py-2 text-white no-underline hover:opacity-90 transition">
-            点击加入群聊
-          </a>
-          <p class="text-sm opacity-70 mt-2">（26级三院科协安全部招新群）</p>
+        <!-- 加入方式 -->
+        <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm text-center">
+          <h2 class="text-xl font-bold mb-4 flex items-center justify-center gap-2">
+            <span>📬</span> 加入方式
+          </h2>
+          <div class="bg-[rgba(99,179,237,0.1)] rounded-xl p-6 mb-4">
+            <p class="text-lg mb-2">招新 QQ 群</p>
+            <p class="text-4xl font-extrabold text-[var(--color-primary)] mb-3">995962963</p>
+            <a href="https://qm.qq.com/q/5pvaUJFYXu" target="_blank" rel="noopener noreferrer" class="inline-block rounded-full bg-[var(--color-primary)] px-6 py-2.5 text-white font-semibold no-underline hover:opacity-90 transition shadow-md">
+              点击加入群聊
+            </a>
+          </div>
+          <div class="mt-4">
+            <img src="/img/recruitment.png" alt="招新群二维码" class="mx-auto w-48 h-auto rounded-xl shadow-md" loading="lazy" />
+            <p class="text-sm opacity-70 mt-2">扫码加入 26级三院科协安全部招新群</p>
+          </div>
         </div>
       </div>
     </div>

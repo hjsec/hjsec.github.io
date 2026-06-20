@@ -1,0 +1,31 @@
+---
+import DefaultLayout from '@layouts/DefaultLayout.astro'
+---
+
+<DefaultLayout title="资源 | 花江安全">
+  <section class="my-12">
+    <div class="container">
+      <h1 class="text-4xl font-bold mb-4">资源汇总</h1>
+      <p class="text-xl opacity-80 mb-8">
+        这里汇总了安全方向常用的外部资源，帮助你快速入门。
+      </p>
+      <div class="grid gap-6 md:grid-cols-3">
+        <a href="https://ctf-wiki.org/" target="_blank" rel="noopener"
+           class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 no-underline shadow-sm hover:shadow-lg transition">
+          <h2 class="text-2xl font-bold mb-3">CTF Wiki</h2>
+          <p class="opacity-80">全面的 CTF 知识库。</p>
+        </a>
+        <a href="https://github.com/Naetw/CTF-pwn-tips" target="_blank" rel="noopener"
+           class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 no-underline shadow-sm hover:shadow-lg transition">
+          <h2 class="text-2xl font-bold mb-3">CTF Pwn Tips</h2>
+          <p class="opacity-80">二进制安全技巧集合。</p>
+        </a>
+        <a href="https://www.bilibili.com/video/BV1x7411y7Qq" target="_blank" rel="noopener"
+           class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 no-underline shadow-sm hover:shadow-lg transition">
+          <h2 class="text-2xl font-bold mb-3">二进制安全入门教程</h2>
+          <p class="opacity-80">B 站视频教程，从零开始学二进制。</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</DefaultLayout>

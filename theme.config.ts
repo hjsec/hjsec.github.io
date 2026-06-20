@@ -11,7 +11,7 @@ export default defineThemeConfig({
     description:
       'An Accessible Starter Theme for Astro including several accessibility features and tools to help you build faster.',
     author: 'Incluud',
-    image: previewImage, // Can also be a string e.g. '/social-preview-image.png',
+    image: previewImage,
   },
   colors: {
     primary: '#d648ff',
@@ -38,40 +38,24 @@ export default defineThemeConfig({
         href: '/portfolio',
       },
       {
-        label: 'Features',
+        label: '知识库',
         type: 'dropdown',
         items: [
           {
-            label: 'Accessibility statement',
-            href: '/accessibility-statement',
+            label: '什么是 CTF？',
+            href: '/blog/what-is-ctf',
           },
           {
-            label: 'Accessible components',
-            href: '/accessible-components',
+            label: '安全方向简介',
+            href: '/blog/security-fields',
           },
           {
-            label: 'Accessible launcher',
-            href: '/accessible-launcher',
+            label: '学习路线',
+            href: '/blog/learning-path',
           },
           {
-            label: 'Color contrast checker',
-            href: '/color-contrast-checker',
-          },
-          {
-            label: 'Markdown page',
-            href: '/markdown-page',
-          },
-          {
-            label: 'MDX page',
-            href: '/mdx-page',
-          },
-          {
-            label: '404 page',
-            href: '/404',
-          },
-          {
-            label: 'Sitemap',
-            href: '/sitemap',
+            label: '资源',
+            href: '/blog/resource',
           },
         ],
       },
