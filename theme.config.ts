@@ -3,7 +3,7 @@ import previewImage from '@assets/img/social-preview-image.png'
 import logoImage from '@assets/img/logo.svg'
 
 export default defineThemeConfig({
-  name: 'Accessible Astro',
+  name: '花江安全',
   id: 'accessible-astro-starter',
   logo: logoImage,
   seo: {
@@ -71,7 +71,7 @@ export default defineThemeConfig({
       {
         type: 'link',
         label: 'Go to our GitHub page, opens in new tab',
-        href: 'https://github.com/incluud/accessible-astro-starter',
+        href: 'https://github.com/hjsec/hjsec.github.io',
         icon: 'lucide:github',
         external: true,
         excludeFromLauncher: true,
