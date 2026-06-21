@@ -7,7 +7,7 @@ export default defineThemeConfig({
   id: 'accessible-astro-starter',
   logo: logoImage,
   seo: {
-    title: 'Accessible Astro Starter',
+    title: '花江安全',
     description:
       'An Accessible Starter Theme for Astro including several accessibility features and tools to help you build faster.',
     author: 'Incluud',
