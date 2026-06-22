@@ -392,3 +392,29 @@
     gap: 0.75rem;
   }
 }
+
+// 确保格言特效在移动端也有效
+@media (max-width: 767px) {
+  .member-motto {
+    margin: 0.75rem 0 1rem !important;
+    padding: 0.6rem 1rem 0.6rem 1.2rem !important;
+    background: linear-gradient(135deg, rgba(99,179,237,0.08) 0%, rgba(183,148,244,0.08) 100%) !important;
+    border-left: 4px solid var(--color-primary, #4f8cc9) !important;
+    border-radius: 0.5rem !important;
+    font-style: italic !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    color: var(--foreground-color, #2d3748) !important;
+    opacity: 0.9 !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03) !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  // 暗色模式移动端
+  .dark .member-motto {
+    background: linear-gradient(135deg, rgba(99,179,237,0.1) 0%, rgba(183,148,244,0.1) 100%) !important;
+    border-left-color: var(--color-primary-light, #63b3ed) !important;
+    color: #e2e8f0 !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+  }
+}
