@@ -10,7 +10,7 @@ export default defineThemeConfig({
     title: '花江安全',
     description:
       'An Accessible Starter Theme for Astro including several accessibility features and tools to help you build faster.',
-    author: 'Incluud',
+    author: '花江安全-步六孤',
     image: previewImage,
   },
   colors: {
