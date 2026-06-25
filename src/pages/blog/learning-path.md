@@ -74,3 +74,11 @@ next: null
     查看资源汇总 →
   </a>
 </div>
+
+---
+
+> 📺 **学长学姐推荐**  
+> 由于期末周还没搭好练习靶场，可以先看这个计算机基础操作教学视频：  
+> [https://www.bilibili.com/video/BV13F411A7mD](https://www.bilibili.com/video/BV13F411A7mD)  
+> 建议在开学前先把 **Linux 基础命令** 和 **C 语言基本语法** 过一遍，这是所有 IT 相关专业（计算机、电子信息、自动化等）的通用基础。
+

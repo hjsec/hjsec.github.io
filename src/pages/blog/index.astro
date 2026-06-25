@@ -2,13 +2,28 @@
 import DefaultLayout from '@layouts/DefaultLayout.astro'
 ---
 
-<DefaultLayout title="知识库">
+<DefaultLayout title="知识库 | 花江安全">
   <section class="my-12">
     <div class="container">
       <h1 class="text-4xl font-bold text-center mb-4">📚 知识库 / 科普</h1>
       <p class="text-xl text-center opacity-80 mb-12">
         这里会持续更新安全方向的基础知识、学习路线和工具教程，帮助新人快速入门。
       </p>
+
+      <!-- 学长学姐推荐 -->
+      <div class="mx-auto max-w-3xl mb-16 rounded-2xl border-l-4 border-[#63b3ed] bg-[rgba(99,179,237,0.08)] p-6 dark:bg-[rgba(99,179,237,0.12)]">
+        <h2 class="text-xl font-bold mb-3">📺 学长学姐推荐</h2>
+        <p class="opacity-90 mb-2">
+          由于期末周还没搭好练习靶场，可以先看这个计算机基础操作教学视频：
+        </p>
+        <a href="https://www.bilibili.com/video/BV13F411A7mD" target="_blank" rel="noopener" class="text-[var(--color-primary)] font-semibold hover:underline break-all">
+          https://www.bilibili.com/video/BV13F411A7mD
+        </a>
+        <p class="opacity-90 mt-3">
+          建议在开学前先把 <strong>Linux 基础命令</strong> 和 <strong>C 语言基本语法</strong> 过一遍，这是所有 IT 相关专业（计算机、电子信息、自动化等）的通用基础。
+        </p>
+        <p class="opacity-60 text-sm mt-3">——today</p>
+      </div>
 
       <!-- 科普文章卡片 -->
       <div class="grid gap-6 md:grid-cols-3 mb-16">

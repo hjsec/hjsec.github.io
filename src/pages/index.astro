@@ -6,6 +6,29 @@ import Hero from '@components/Hero.astro'
 <DefaultLayout title="花江安全" useTitleTemplate={false}>
   <Hero />
 
+  <!-- 2026 社团招新宣传（放在最显眼的位置） -->
+  <section class="mb-24">
+    <div class="container">
+      <div class="mx-auto max-w-3xl rounded-2xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-8 shadow-sm text-center">
+        <h2 class="text-2xl font-bold mb-4">🎉 2026 社团招新进行中</h2>
+        <p class="text-lg opacity-80 mb-6">对信息安全感兴趣？想打 CTF、学二进制、搞渗透？快来加入花江安全！</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-6 items-center">
+          <div class="bg-[rgba(99,179,237,0.1)] rounded-xl p-5">
+            <p class="text-sm mb-2">招新 QQ 群</p>
+            <p class="text-3xl font-extrabold text-[var(--color-primary)] mb-2">995962963</p>
+            <a href="https://qm.qq.com/q/5pvaUJFYXu" target="_blank" rel="noopener noreferrer" class="inline-block rounded-full bg-[var(--color-primary)] px-5 py-2 text-white font-semibold no-underline hover:opacity-90 transition shadow-md">
+              点击加入群聊
+            </a>
+          </div>
+          <div>
+            <img src="/img/recruitment.png" alt="招新群二维码" class="w-40 h-auto rounded-xl shadow-md mx-auto" loading="lazy" />
+            <p class="text-sm opacity-70 mt-2">扫码加入 26级招新群</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 宣传图片展示（我们的身影） -->
   <section class="mb-24">
     <div class="container">
@@ -27,3 +50,41 @@ import Hero from '@components/Hero.astro'
     </div>
   </section>
 
+  <!-- 工位展示 -->
+  <section class="mb-24">
+    <div class="container">
+      <h2 class="text-center text-3xl font-bold mb-12">我们的工位</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <img src="/img/workspace1.jpg" alt="工位1" class="w-full h-60 object-cover" loading="lazy" />
+          <p class="text-center text-sm mt-2 opacity-70">宽敞的卡座与双屏开发环境</p>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <img src="/img/workspace2.jpg" alt="工位2" class="w-full h-60 object-cover" loading="lazy" />
+          <p class="text-center text-sm mt-2 opacity-70">安静舒适的学习空间</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 特色卡片 -->
+  <section class="mb-24">
+    <div class="container grid gap-6 md:grid-cols-3">
+      <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 text-center shadow-sm hover:shadow-lg transition">
+        <div class="text-3xl mb-3">💣</div>
+        <h3 class="text-xl font-bold mb-2">二进制安全</h3>
+        <p class="opacity-80">栈溢出、堆利用、内核安全，用漏洞挖掘数字世界的基石。</p>
+      </div>
+      <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 text-center shadow-sm hover:shadow-lg transition">
+        <div class="text-3xl mb-3">🚩</div>
+        <h3 class="text-xl font-bold mb-2">CTF 竞赛</h3>
+        <p class="opacity-80">以赛代练，从校内选拔到全国决赛，用实力说话。</p>
+      </div>
+      <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 text-center shadow-sm hover:shadow-lg transition">
+        <div class="text-3xl mb-3">🧑‍🤝‍🧑</div>
+        <h3 class="text-xl font-bold mb-2">招新与培训</h3>
+        <p class="opacity-80">零基础入门，学长带教，每周技术分享，快速成长。</p>
+      </div>
+    </div>
+  </section>
+</DefaultLayout>

@@ -3,7 +3,7 @@ import DefaultLayout from '@layouts/DefaultLayout.astro'
 import PageHeader from '@components/PageHeader.astro'
 ---
 
-<DefaultLayout class="contact-page" title="加入我们 | 花江安全">
+<DefaultLayout class="contact-page" title="加入我们">
   <PageHeader
     title="加入我们"
     subtitle="在二进制中寻找漏洞，在数字世界里找到我们。"
@@ -11,7 +11,7 @@ import PageHeader from '@components/PageHeader.astro'
   />
   <section class="container my-16">
     <div class="grid grid-cols-1 gap-16 md:grid-cols-2">
-      <!-- 左栏：社团介绍 + 我们是谁 + 招新历程 -->
+      <!-- 左侧：招新信息 -->
       <div class="space-content">
         <p class="text-lg mb-6">
           <strong>花江安全</strong>（Huajiang Security，HJSec）隶属于桂林电子科技大学计算机与信息安全学院大学生科技协会，为科协安全部，招新由科协统筹进行。
@@ -25,14 +25,18 @@ import PageHeader from '@components/PageHeader.astro'
           <p class="opacity-90">
             我们不是培训班，不是娱乐社团，也不是学生会团委等行政部门，我们是以安全学习为主的科技社团。如果你也对攻防对抗、漏洞挖掘、二进制或 Web 安全有本能的兴奋，安全部就是你的归宿。
           </p>
-          <p class="opacity-90 mt-3 font-semibold">✨ 加入我们的好处</p>
-          <ul class="list-inside list-disc my-2 opacity-90 space-y-1">
-            <li><strong>拒绝信息差</strong>：社团中有保研、考研、考公上岸的学长学姐，也有转专业成功、直接就业的学长学姐，他们都可以给你分享经验。</li>
-            <li>我们不是吃喝玩乐的娱乐社团，专注于学习安全技能、打比赛。进入社团后，学长学姐可以带你学习。</li>
-            <li>社团以信息安全、网络空间安全、密码科学与技术专业的学生为主，欢迎全校各专业的同学。选错专业不要紧，只要想学安全、肯学安全、想成为黑客，都可以来。</li>
-            <li><strong>资源丰富</strong>：我们不仅给你提供工位，你还能在社团扩展人脉，认识更多志同道合的朋友，一起打比赛奋斗。</li>
+        </div>
+
+        <!-- 招新信息卡片 -->
+        <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm mb-8">
+          <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+            <span>📋</span> 招新信息
+          </h2>
+          <ul class="list-inside list-disc my-4 space-y-3">
+            <li><strong>面向对象</strong>：全校在校生，不限专业，热烈欢迎大一新生</li>
+            <li><strong>基本要求</strong>：对信息安全有浓厚兴趣，具备或愿意学习网络安全有关知识，对黑客技术有热情</li>
+            <li><strong>方向选择</strong>：二进制安全 (Pwn)、逆向工程 (Reverse)、Web 安全、密码学 (Crypto)、MISC</li>
           </ul>
-          <p class="opacity-70 text-sm mt-2">——步六孤</p>
         </div>
 
         <!-- 招新历程：时间线样式 -->
@@ -41,6 +45,7 @@ import PageHeader from '@components/PageHeader.astro'
             <span>🗺️</span> 招新历程
           </h2>
           <div class="space-y-6">
+            <!-- 步骤1 -->
             <div class="flex gap-4">
               <div class="flex flex-col items-center">
                 <div class="w-10 h-10 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center font-bold text-sm">1</div>
@@ -51,6 +56,7 @@ import PageHeader from '@components/PageHeader.astro'
                 <p class="opacity-80">在家打迎新靶场，学习 CTF 基础知识，对安全世界有个初步了解</p>
               </div>
             </div>
+            <!-- 步骤2 -->
             <div class="flex gap-4">
               <div class="flex flex-col items-center">
                 <div class="w-10 h-10 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center font-bold text-sm">2</div>
@@ -61,6 +67,7 @@ import PageHeader from '@components/PageHeader.astro'
                 <p class="opacity-80">新生招新赛，通过题目观察成员表现。迎新靶场不会关闭，新生可以随时向学长学姐请教</p>
               </div>
             </div>
+            <!-- 步骤3 -->
             <div class="flex gap-4">
               <div class="flex flex-col items-center">
                 <div class="w-10 h-10 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center font-bold text-sm">3</div>
@@ -74,29 +81,8 @@ import PageHeader from '@components/PageHeader.astro'
         </div>
       </div>
 
-      <!-- 右栏：招新信息 + 学长学姐推荐 + 迎新靶场 + 加入方式 -->
+      <!-- 右侧：迎新靶场 & 加入方式 -->
       <div class="space-content">
-        <!-- 招新信息卡片 -->
-        <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm mb-8">
-          <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
-            <span>📋</span> 招新信息
-          </h2>
-          <ul class="list-inside list-disc my-4 space-y-3">
-            <li><strong>面向对象</strong>：全校在校生，不限专业，热烈欢迎大一新生</li>
-            <li><strong>基本要求</strong>：对信息安全有浓厚兴趣，具备或愿意学习网络安全有关知识，对黑客技术有热情</li>
-            <li><strong>方向选择</strong>：二进制安全 (Pwn)、逆向工程 (Reverse)、Web 安全、密码学 (Crypto)、MISC</li>
-          </ul>
-        </div>
-
-        <!-- 学长学姐推荐卡片 -->
-        <div class="rounded-xl border-l-4 border-[#63b3ed] bg-[rgba(99,179,237,0.08)] p-5 mb-8 dark:bg-[rgba(99,179,237,0.12)]">
-          <h3 class="text-lg font-bold mb-2">📺 学长学姐推荐</h3>
-          <p class="opacity-90 mb-2">由于期末周还没搭好练习靶场，可以先看这个计算机基础操作教学视频：</p>
-          <a href="https://www.bilibili.com/video/BV13F411A7mD" target="_blank" rel="noopener" class="text-[var(--color-primary)] font-semibold hover:underline break-all">https://www.bilibili.com/video/BV13F411A7mD\</a\>
-          <p class="opacity-90 mt-3">建议在开学前先把 <strong>Linux 基础命令</strong> 和 <strong>C 语言基本语法</strong> 过一遍，这是所有 IT 相关专业的通用基础。</p>
-          <p class="opacity-60 text-sm mt-2">——today</p>
-        </div>
-
         <!-- 迎新靶场 -->
         <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm mb-8 text-center">
           <h2 class="text-xl font-bold mb-4 flex items-center justify-center gap-2">
