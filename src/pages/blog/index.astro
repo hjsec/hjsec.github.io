@@ -2,7 +2,7 @@
 import DefaultLayout from '@layouts/DefaultLayout.astro'
 ---
 
-<DefaultLayout title="知识库">
+<DefaultLayout title="知识库 | 花江安全">
   <section class="my-12">
     <div class="container">
       <h1 class="text-4xl font-bold text-center mb-4">📚 知识库 / 科普</h1>
@@ -44,7 +44,27 @@ import DefaultLayout from '@layouts/DefaultLayout.astro'
         </a>
       </div>
 
-      <!-- 资源链接 + 招新引导 -->
+      <!-- 安全论坛推荐 -->
+      <div class="mx-auto max-w-3xl mb-16 rounded-2xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm">
+        <h2 class="text-xl font-bold mb-4">🛡️ 安全论坛推荐</h2>
+        <p class="opacity-80 mb-4">国内安全圈必逛的几个社区，大牛云集，干货满满：</p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <a href="https://www.freebuf.com/" target="_blank" rel="noopener" class="rounded-lg border border-[var(--border-color-subtle)] p-3 text-center text-sm no-underline hover:bg-[var(--color-primary)] hover:text-white transition">
+            FreeBuf
+          </a>
+          <a href="https://www.kanxue.com/" target="_blank" rel="noopener" class="rounded-lg border border-[var(--border-color-subtle)] p-3 text-center text-sm no-underline hover:bg-[var(--color-primary)] hover:text-white transition">
+            看雪
+          </a>
+          <a href="https://xz.aliyun.com/" target="_blank" rel="noopener" class="rounded-lg border border-[var(--border-color-subtle)] p-3 text-center text-sm no-underline hover:bg-[var(--color-primary)] hover:text-white transition">
+            先知社区
+          </a>
+          <a href="https://www.52pojie.cn/" target="_blank" rel="noopener" class="rounded-lg border border-[var(--border-color-subtle)] p-3 text-center text-sm no-underline hover:bg-[var(--color-primary)] hover:text-white transition">
+            吾爱论坛
+          </a>
+        </div>
+      </div>
+
+      <!-- 常用资源 + 招新引导 -->
       <div class="grid gap-6 md:grid-cols-2">
         <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm">
           <h2 class="text-xl font-bold mb-4">🔗 常用资源</h2>
