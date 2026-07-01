@@ -20,11 +20,6 @@ const { src = '/astronaut-hero-img.webp' }: Props = Astro.props
         <p class="text-center text-lg md:text-2xl md:text-left">
           桂林电子科技大学 -- 计算机与信息安全学院 -- 大学生科技协会 —— 安全部。HJSec 意为花江安全，是我们的品牌名。
         </p>
-        <div class="mt-6 border-l-4 border-[#63b3ed] bg-[rgba(99,179,237,0.08)] p-4 rounded-r-xl dark:bg-[rgba(99,179,237,0.12)]">
-          <p class="text-center text-lg italic md:text-left opacity-90">
-            “我们从来不寻找天才。<br>只要你有自身闪亮发光的地方，你就是我们要寻找的人。”
-          </p>
-        </div>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
           <Link
             href="/contact"

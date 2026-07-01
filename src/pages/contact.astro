@@ -3,7 +3,7 @@ import DefaultLayout from '@layouts/DefaultLayout.astro'
 import PageHeader from '@components/PageHeader.astro'
 ---
 
-<DefaultLayout class="contact-page" title="加入我们">
+<DefaultLayout class="contact-page" title="加入我们 | 花江安全">
   <PageHeader
     title="加入我们"
     subtitle="在二进制中寻找漏洞，在数字世界里找到我们。"
@@ -11,7 +11,7 @@ import PageHeader from '@components/PageHeader.astro'
   />
   <section class="container my-16">
     <div class="grid grid-cols-1 gap-16 md:grid-cols-2">
-      <!-- 左栏：社团介绍 + 我们是谁 + 招新历程 -->
+      <!-- 左栏：社团介绍 + 我们是谁 + 招新信息 + 招新历程 -->
       <div class="space-content">
         <p class="text-lg mb-6">
           <strong>花江安全</strong>（Huajiang Security，HJSec）隶属于桂林电子科技大学计算机与信息安全学院大学生科技协会，为科协安全部，招新由科协统筹进行。
@@ -33,6 +33,18 @@ import PageHeader from '@components/PageHeader.astro'
             <li><strong>资源丰富</strong>：我们不仅给你提供工位，你还能在社团扩展人脉，认识更多志同道合的朋友，一起打比赛奋斗。</li>
           </ul>
           <p class="opacity-70 text-sm mt-2">——步六孤</p>
+        </div>
+
+        <!-- 招新信息卡片 -->
+        <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm mb-8">
+          <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+            <span>📋</span> 招新信息
+          </h2>
+          <ul class="list-inside list-disc my-4 space-y-3">
+            <li><strong>面向对象</strong>：全校在校生，不限专业，热烈欢迎大一新生</li>
+            <li><strong>基本要求</strong>：对信息安全有浓厚兴趣，具备或愿意学习网络安全有关知识，对黑客技术有热情</li>
+            <li><strong>方向选择</strong>：二进制安全 (Pwn)、逆向工程 (Reverse)、Web 安全、密码学 (Crypto)、MISC</li>
+          </ul>
         </div>
 
         <!-- 招新历程：时间线样式 -->
@@ -74,18 +86,30 @@ import PageHeader from '@components/PageHeader.astro'
         </div>
       </div>
 
-      <!-- 右栏：招新信息 + 学长学姐推荐 + 迎新靶场 + 加入方式 -->
+      <!-- 右栏：群公告 + 学长学姐推荐 + 迎新靶场 + 加入方式 -->
       <div class="space-content">
-        <!-- 招新信息卡片 -->
-        <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm mb-8">
-          <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
-            <span>📋</span> 招新信息
-          </h2>
-          <ul class="list-inside list-disc my-4 space-y-3">
-            <li><strong>面向对象</strong>：全校在校生，不限专业，热烈欢迎大一新生</li>
-            <li><strong>基本要求</strong>：对信息安全有浓厚兴趣，具备或愿意学习网络安全有关知识，对黑客技术有热情</li>
-            <li><strong>方向选择</strong>：二进制安全 (Pwn)、逆向工程 (Reverse)、Web 安全、密码学 (Crypto)、MISC</li>
+        <!-- 📣 群公告 -->
+        <div class="rounded-xl border-l-4 border-[#f59e0b] bg-[rgba(245,158,11,0.08)] p-5 mb-8 dark:bg-[rgba(245,158,11,0.12)]">
+          <h3 class="text-lg font-bold mb-2 flex items-center gap-2">
+            <span>📣</span> 群公告
+          </h3>
+          <p class="opacity-90 font-semibold mb-2">我们从来不寻找天才。只要你有自身闪亮发光的地方，你就是我们要寻找的人。</p>
+          <p class="opacity-90 mb-2">群里有26预科、刚转专业的、还在填志愿的，别社恐，直接聊。</p>
+          <p class="opacity-90 mb-2 font-semibold">想提前入门：</p>
+          <ul class="list-inside list-disc my-2 opacity-90 space-y-1 text-sm">
+            <li>装 VMware（群文件有）</li>
+            <li>
+              Ubuntu 镜像：
+              <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/24.04.2/ubuntu-24.04.4-desktop-amd64.iso" target="_blank" rel="noopener" class="text-[var(--color-primary)] hover:underline break-all">下载链接</a>
+            </li>
+            <li>
+              Kali VMware 版：
+              <a href="https://mirrors.tuna.tsinghua.edu.cn/kali-images/kali-2026.2/kali-linux-2026.2-vmware-amd64.7z" target="_blank" rel="noopener" class="text-[var(--color-primary)] hover:underline break-all">下载链接</a>
+            </li>
           </ul>
+          <p class="opacity-90 mt-2">装好系统，打开终端，不懂就问。现在人少，我们能一对一讲清楚。等八月人多了，你们就是第一批老手——比同届信安、网安、密码专业的同学先跑一步。</p>
+          <p class="opacity-90 mt-2 font-semibold">世界是你们的，期待你们第一批进群的以后在招新靶场的表现。</p>
+          <p class="opacity-60 text-sm mt-2">2026.7.1 ——today</p>
         </div>
 
         <!-- 学长学姐推荐卡片 -->
