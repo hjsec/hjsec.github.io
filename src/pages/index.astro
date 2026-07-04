@@ -42,11 +42,17 @@ import Hero from '@components/Hero.astro'
 
           <!-- 靶场入口卡片 -->
           <div class="rounded-2xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm text-center">
-            <p class="text-lg font-semibold mb-3">🎯 想提前练手？</p>
-            <a href="http://125.217.52.145/" target="_blank" rel="noopener noreferrer" class="inline-block rounded-full px-8 py-4 text-white font-bold text-lg no-underline transition shadow-lg hover:opacity-90" style="background: linear-gradient(135deg, #63b3ed, #b794f4); box-shadow: 0 0 20px rgba(99,179,237,0.5);">
-              进入迎新靶场（校内）
-            </a>
-            <p class="text-sm opacity-70 mt-3">目前仅限校园网访问</p>
+            <p class="text-lg font-semibold mb-3">🎯 迎新靶场</p>
+            <div class="space-y-2 mb-4">
+              <a href="http://125.217.52.145/" target="_blank" rel="noopener noreferrer" class="inline-block rounded-full px-6 py-2.5 text-white font-semibold text-sm no-underline transition shadow-md hover:opacity-90" style="background: linear-gradient(135deg, #63b3ed, #b794f4); box-shadow: 0 0 15px rgba(99,179,237,0.5);">
+                🏫 校园网入口
+              </a>
+              <br>
+              <a href="http://sayble.xyz:18080/" target="_blank" rel="noopener noreferrer" class="inline-block rounded-full px-6 py-2.5 text-white font-semibold text-sm no-underline transition shadow-md hover:opacity-90 mt-2" style="background: linear-gradient(135deg, #f59e0b, #fbbf24); box-shadow: 0 0 15px rgba(245,158,11,0.5);">
+                🌐 公网入口
+              </a>
+            </div>
+            <p class="text-sm opacity-70">由于云服务器带宽有限，请校内同学尽量使用校园网入口，速度更快。</p>
           </div>
         </div>
       </div>

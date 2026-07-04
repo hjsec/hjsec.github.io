@@ -90,10 +90,17 @@ import PageHeader from '@components/PageHeader.astro'
           <h2 class="text-xl font-bold mb-4 flex items-center justify-center gap-2">
             <span>🎯</span> 迎新靶场
           </h2>
-          <p class="text-lg mb-2">
-            <a href="http://125.217.52.145/" target="_blank" rel="noopener noreferrer" class="text-[var(--color-primary)] font-semibold hover:underline">http://125.217.52.145/\</a\>
-          </p>
-          <p class="text-sm opacity-70">目前仅限校园网内访问，帮助新生熟悉 CTF，为招新赛热身</p>
+          <div class="space-y-3">
+            <div>
+              <p class="text-sm font-semibold mb-1">🏫 校园网地址（校内快速）</p>
+              <a href="http://125.217.52.145/" target="_blank" rel="noopener noreferrer" class="text-[var(--color-primary)] font-semibold hover:underline">http://125.217.52.145/\</a\>
+            </div>
+            <div>
+              <p class="text-sm font-semibold mb-1">🌐 公网地址（校外访问）</p>
+              <a href="http://sayble.xyz:18080/" target="_blank" rel="noopener noreferrer" class="text-[var(--color-primary)] font-semibold hover:underline">http://sayble.xyz:18080/\</a\>
+            </div>
+          </div>
+          <p class="text-sm opacity-70 mt-4">由于云服务器带宽有限，请校内同学尽量使用校园网地址访问，速度更快。</p>
         </div>
 
         <!-- 📣 群公告 -->
