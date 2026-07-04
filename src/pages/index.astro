@@ -6,24 +6,47 @@ import Hero from '@components/Hero.astro'
 <DefaultLayout title="花江安全" useTitleTemplate={false}>
   <Hero />
 
-
-  <!-- 2026 社团招新宣传（放在最显眼的位置） -->
+  <!-- 招新宣传 + 金句与靶场（金句在右，靶场也在右） -->
   <section class="mb-24">
     <div class="container">
-      <div class="mx-auto max-w-3xl rounded-2xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-8 shadow-sm text-center">
-        <h2 class="text-2xl font-bold mb-4">🎉 2026 社团招新进行中</h2>
-        <p class="text-lg opacity-80 mb-6">对信息安全感兴趣？想打 CTF、学二进制、搞渗透？快来加入花江安全！</p>
-        <div class="flex flex-col sm:flex-row justify-center gap-6 items-center">
-          <div class="bg-[rgba(99,179,237,0.1)] rounded-xl p-5">
-            <p class="text-sm mb-2">招新 QQ 群</p>
-            <p class="text-3xl font-extrabold text-[var(--color-primary)] mb-2">995962963</p>
-            <a href="https://qm.qq.com/q/5pvaUJFYXu" target="_blank" rel="noopener noreferrer" class="inline-block rounded-full bg-[var(--color-primary)] px-5 py-2 text-white font-semibold no-underline hover:opacity-90 transition shadow-md">
-              点击加入群聊
-            </a>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-4xl mx-auto">
+        <!-- 左侧：招新宣传 -->
+        <div class="rounded-2xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-8 shadow-sm text-center">
+          <h2 class="text-2xl font-bold mb-4">🎉 2026 社团招新进行中</h2>
+          <p class="text-lg opacity-80 mb-6">对信息安全感兴趣？想打 CTF、学二进制、搞渗透？快来加入花江安全！</p>
+          <div class="flex flex-col sm:flex-row justify-center gap-6 items-center">
+            <div class="bg-[rgba(99,179,237,0.1)] rounded-xl p-5">
+              <p class="text-sm mb-2">招新 QQ 群</p>
+              <p class="text-3xl font-extrabold text-[var(--color-primary)] mb-2">995962963</p>
+              <a href="https://qm.qq.com/q/5pvaUJFYXu" target="_blank" rel="noopener noreferrer" class="inline-block rounded-full bg-[var(--color-primary)] px-5 py-2 text-white font-semibold no-underline hover:opacity-90 transition shadow-md">
+                点击加入群聊
+              </a>
+            </div>
+            <div>
+              <img src="/img/recruitment.png" alt="招新群二维码" class="w-40 h-auto rounded-xl shadow-md mx-auto" loading="lazy" />
+              <p class="text-sm opacity-70 mt-2">扫码加入 26级招新群</p>
+            </div>
           </div>
-          <div>
-            <img src="/img/recruitment.png" alt="招新群二维码" class="w-40 h-auto rounded-xl shadow-md mx-auto" loading="lazy" />
-            <p class="text-sm opacity-70 mt-2">扫码加入 26级招新群</p>
+        </div>
+
+        <!-- 右侧：金句 + 靶场入口（加特效） -->
+        <div class="flex flex-col gap-6">
+          <!-- 金句卡片 -->
+          <div class="relative rounded-2xl p-8 shadow-lg text-center md:text-left" style="background: linear-gradient(135deg, rgba(99,179,237,0.08) 0%, rgba(183,148,244,0.12) 100%); border: 2px solid transparent; background-clip: padding-box; position: relative;">
+            <!-- 渐变边框模拟 -->
+            <div style="position: absolute; inset: 0; border-radius: 1rem; padding: 2px; background: linear-gradient(135deg, #63b3ed, #b794f4); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;"></div>
+            <p class="text-2xl font-bold leading-relaxed relative" style="text-shadow: 0 0 10px rgba(99,179,237,0.3);">
+              “我们从来不寻找天才。<br>只要你有自身闪亮发光的地方，<br>你就是我们要寻找的人。”
+            </p>
+          </div>
+
+          <!-- 靶场入口卡片 -->
+          <div class="rounded-2xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm text-center">
+            <p class="text-lg font-semibold mb-3">🎯 想提前练手？</p>
+            <a href="http://125.217.52.145/" target="_blank" rel="noopener noreferrer" class="inline-block rounded-full px-8 py-4 text-white font-bold text-lg no-underline transition shadow-lg hover:opacity-90" style="background: linear-gradient(135deg, #63b3ed, #b794f4); box-shadow: 0 0 20px rgba(99,179,237,0.5);">
+              进入迎新靶场（校内）
+            </a>
+            <p class="text-sm opacity-70 mt-3">目前仅限校园网访问</p>
           </div>
         </div>
       </div>
