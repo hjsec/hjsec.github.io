@@ -2,7 +2,7 @@
 import DefaultLayout from '@layouts/DefaultLayout.astro'
 ---
 
-<DefaultLayout class="about-page" title="关于我们">
+<DefaultLayout class="about-page" title="关于我们 | 花江安全" description="花江安全 —— 桂林电子科技大学网络安全社团">
   <!-- 标题与 Logo 并排区域 -->
   <section class="my-12">
     <div class="container">
@@ -16,50 +16,37 @@ import DefaultLayout from '@layouts/DefaultLayout.astro'
     </div>
   </section>
 
-  <!-- 社团简介（优化可读性） -->
-  <section class="mb-24">
-    <div class="container">
-      <div class="mx-auto max-w-3xl rounded-2xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-8 shadow-sm">
+  <section class="my-12">
+    <div class="narrow container">
+      <p>
+        <strong>科协安全部</strong> 是桂林电子科技大学计算机与信息安全学院大学生科技协会下属的安全方向部门。我们还有一个更酷的别名——<strong>花江安全</strong>（Huajiang Security，简称 HJSec），这是我们对外展示的品牌名。
+      </p>
+      <p>
+        我们社团由 <strong>七星瓢虫工作坊、信息安全维护小组、穿山甲安全纵队</strong> 于 2025 年合并组建而成，是一群痴迷于网络安全的同学。既有天天挖 SRC 漏洞、学习渗透技巧的 Web 手，也有在二进制世界里做游戏逆向（包括外挂和反外挂）、病毒分析、漏洞利用的计算机底层爱好者。
+      </p>
 
-        <!-- 我们是谁 -->
-        <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
-          <span>🧩</span> 我们是谁
-        </h2>
-        <p class="text-lg leading-relaxed mb-4">
-          <strong>科协安全部</strong> 是桂林电子科技大学计算机与信息安全学院大学生科技协会下属的安全方向部门。我们还有一个更酷的别名——<strong>花江安全</strong>（Huajiang Security，简称 HJSec），这是我们对外展示的品牌名。
-        </p>
-        <p class="text-lg leading-relaxed mb-4">
-          我们社团由 <strong>七星瓢虫工作坊、信息安全维护小组、穿山甲安全纵队</strong> 于 2025 年合并组建而成，是一群痴迷于网络安全的同学。既有天天挖 SRC 漏洞、学习渗透技巧的 Web 手，也有在二进制世界里做游戏逆向（包括外挂和反外挂）、病毒分析、漏洞利用的计算机底层爱好者。
-        </p>
-
-        <!-- 重点突出：继承遗产 -->
-        <div class="my-6 rounded-xl border-l-4 border-[#63b3ed] bg-[rgba(99,179,237,0.08)] p-5 dark:bg-[rgba(99,179,237,0.15)]">
-          <p class="text-lg font-bold mb-1">✨ 起点很高，遗产丰厚</p>
-          <p class="text-lg leading-relaxed">
-            由于我们是 2025 年 6 月才合并成立的，社团很新，但起点极高。我们继承了之前三个安全社团的丰厚遗产，包括技术资料、工具链、学长学姐的经验传承，以及科协的全力支持。
-          </p>
-        </div>
-
-        <!-- 我们做什么 -->
-        <h2 class="text-2xl font-bold mb-4 mt-8 flex items-center gap-2">
-          <span>⚔️</span> 我们做什么
-        </h2>
-        <p class="text-lg leading-relaxed mb-4">
-          大一大二以打 <strong>CTF 比赛</strong> 为主，同时还参与 <strong>红蓝攻防</strong>、<strong>护网行动</strong> 等实战演练。社团氛围轻松友好，老资历经常水群，现任部长甘部长还会给成员带零食，学长学姐在群里给你期末复习资料和学习资料。
-        </p>
-
-        <!-- 地址 -->
-        <p class="text-center text-lg font-bold mt-6">
-          📍 地址：桂林电子科技大学花江校区第五教学楼5111
+      <!-- 重点突出：继承遗产 -->
+      <div class="my-6 rounded-xl border-l-4 border-[#63b3ed] bg-[rgba(99,179,237,0.08)] p-5 dark:bg-[rgba(99,179,237,0.15)]">
+        <p class="text-lg font-bold mb-1">✨ 起点很高，遗产丰厚</p>
+        <p class="text-lg leading-relaxed">
+          由于我们是 2025 年 6 月才合并成立的，社团很新，但起点极高。我们继承了之前三个安全社团的丰厚遗产，包括技术资料、工具链、学长学姐的经验传承，以及科协的全力支持。
         </p>
       </div>
-    </div>
-  </section>
 
-  <!-- 我们的资源（卡片网格） -->
-  <section class="mb-24">
-    <div class="container">
-      <h2 class="text-center text-3xl font-bold mb-12">🛠️ 我们的资源</h2>
+      <!-- 我们做什么 -->
+      <h2 class="text-2xl font-bold mb-4 mt-8 flex items-center gap-2">
+        <span>⚔️</span> 我们做什么
+      </h2>
+      <p class="text-lg leading-relaxed mb-4">
+        大一大二以打 <strong>CTF 比赛</strong> 为主，同时还参与 <strong>红蓝攻防</strong>、<strong>护网行动</strong> 等实战演练。社团氛围轻松友好，老资历经常水群，现任部长甘部长还会给成员带零食，学长学姐在群里给你期末复习资料和学习资料。
+      </p>
+
+      <!-- 地址 -->
+      <p class="text-center text-lg font-bold mt-6">
+        📍 地址：桂林电子科技大学花江校区第五教学楼5111
+      </p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">🛠️ 我们的资源</h2>
       <div class="mx-auto max-w-4xl grid gap-6 md:grid-cols-3">
         <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 text-center shadow-sm hover:shadow-lg transition">
           <div class="text-3xl mb-3">💾</div>
@@ -77,13 +64,8 @@ import DefaultLayout from '@layouts/DefaultLayout.astro'
           <p class="opacity-80">作为科协的一个部门，有科协的资源支持</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- 我们的方向（卡片网格） -->
-  <section class="mb-24">
-    <div class="container">
-      <h2 class="text-center text-3xl font-bold mb-12">🎯 我们的方向</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">🎯 我们的方向</h2>
       <div class="mx-auto max-w-4xl grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm hover:shadow-lg transition">
           <h3 class="text-xl font-bold mb-2">Web 安全与渗透测试</h3>
@@ -114,6 +96,12 @@ import DefaultLayout from '@layouts/DefaultLayout.astro'
           <p class="opacity-80">红蓝对抗，实战攻防演练</p>
         </div>
       </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">我们的足迹</h2>
+      <p>
+        我们从零开始，在网络安全多个领域持续深耕。团队虽新，但每一位成员都在用自己的方式成长：或是挖到第一个漏洞，或是在 CTF 中拿下一血，或是写出了第一篇技术分析文章。我们相信，真正的安全能力来自于对底层原理的深刻理解和对未知领域的不断探索。
+        <span style="font-size: 0.65rem; color: #a0aec0; margin-left: 0.5rem;">flag5:y</span>
+      </p>
     </div>
   </section>
 </DefaultLayout>
