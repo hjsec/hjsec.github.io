@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>flag1 : T</title>
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: #0a0f18;
+    background-image: 
+      linear-gradient(rgba(0,255,65,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,255,65,0.04) 1px, transparent 1px);
+    background-size: 50px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', monospace;
+  }
+  .container {
+    text-align: center;
+    padding: 2rem;
+    border: 2px solid rgba(99,179,237,0.3);
+    border-radius: 2rem;
+    background: rgba(10,15,24,0.8);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 60px rgba(99,179,237,0.3), 0 0 120px rgba(183,148,244,0.2);
+    animation: glowPulse 2s ease-in-out infinite alternate;
+  }
+  @keyframes glowPulse {
+    from { box-shadow: 0 0 40px rgba(99,179,237,0.3), 0 0 80px rgba(183,148,244,0.2); }
+    to { box-shadow: 0 0 80px rgba(99,179,237,0.6), 0 0 150px rgba(183,148,244,0.4); }
+  }
+  h1 {
+    font-size: 12rem;
+    font-weight: 900;
+    margin: 0;
+    background: linear-gradient(135deg, #63b3ed, #b794f4, #63b3ed);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s linear infinite;
+    text-shadow: 0 0 40px rgba(99,179,237,0.5);
+    letter-spacing: 0.2em;
+  }
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .sub {
+    font-size: 2rem;
+    color: #8ab4f8;
+    opacity: 0.8;
+    margin-top: 1rem;
+    letter-spacing: 0.3em;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>flag1:T</h1>
+    <p class="sub">FRAGMENT · 01</p>
+  </div>
+</body>
+</html>
