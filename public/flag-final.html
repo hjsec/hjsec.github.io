@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>flag : T0d@y</title>
+<style>
+  :root {
+    --bg: #0a0f18;
+    --text: #e6edf3;
+    --card-bg: rgba(10,15,24,0.9);
+    --border: rgba(99,179,237,0.2);
+    --grid-line: rgba(99,179,237,0.06);
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg);
+    background-image: 
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 60px 60px;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 2px solid var(--border);
+    border-radius: 2rem;
+    padding: 4rem 5rem;
+    box-shadow: 0 0 60px rgba(99,179,237,0.3), 0 0 120px rgba(183,148,244,0.2);
+    backdrop-filter: blur(20px);
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  h1 {
+    font-size: 8rem;
+    font-weight: 900;
+    margin: 0 0 0.5rem 0;
+    background: linear-gradient(135deg, #63b3ed, #b794f4, #63b3ed);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s linear infinite;
+    text-shadow: 0 0 40px rgba(99,179,237,0.5);
+    letter-spacing: 0.1em;
+  }
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .sub {
+    font-size: 2rem;
+    color: #8ab4f8;
+    opacity: 0.8;
+    margin-top: 1rem;
+    letter-spacing: 0.3em;
+  }
+  .glow-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #63b3ed;
+    box-shadow: 0 0 20px #63b3ed;
+    margin: 0 0.5rem;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 20px #63b3ed; }
+    50% { box-shadow: 0 0 40px #63b3ed, 0 0 80px rgba(99,179,237,0.5); }
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>flag<span class="glow-dot"></span>T0d@y</h1>
+    <p class="sub">FINAL FRAGMENT</p>
+  </div>
+</body>
+</html>
