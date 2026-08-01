@@ -11,12 +11,10 @@ import PageHeader from '@components/PageHeader.astro'
   />
   <section class="container my-16">
     <div class="grid grid-cols-1 gap-16 md:grid-cols-2">
-      <!-- 左栏：社团简介 + 招新信息 + 招新历程 -->
       <div class="space-content">
         <p class="text-lg mb-6">
           <strong>花江安全</strong>（Huajiang Security，HJSec）隶属于桂林电子科技大学计算机与信息安全学院大学生科技协会，为科协安全部，欢迎每一个对安全有热情的同学。
         </p>
-
         <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm mb-8">
           <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
             <span>📋</span> 招新信息
@@ -27,7 +25,6 @@ import PageHeader from '@components/PageHeader.astro'
             <li><strong>方向选择</strong>：二进制安全 (Pwn)、逆向工程 (Reverse)、Web 安全、密码学 (Crypto)、MISC</li>
           </ul>
         </div>
-
         <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm">
           <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
             <span>🗺️</span> 招新历程
@@ -49,9 +46,7 @@ import PageHeader from '@components/PageHeader.astro'
         </div>
       </div>
 
-      <!-- 右栏：靶场入口 + 加入方式 -->
       <div class="space-content">
-        <!-- 靶场 -->
         <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm mb-8 text-center">
           <h2 class="text-xl font-bold mb-4 flex items-center justify-center gap-2">
             <span>🎯</span> 迎新靶场
@@ -67,15 +62,12 @@ import PageHeader from '@components/PageHeader.astro'
             </div>
           </div>
           <p class="text-sm opacity-70 mt-4">校内同学请尽量用校园网，速度更快。</p>
-          <!-- 明显一点的隐藏线索 -->
-          <div style="margin-top: 1rem; padding: 0.8rem; background: rgba(99,179,237,0.08); border-radius: 0.5rem; text-align: center;">
-            <span style="font-size: 0.9rem; color: #4f8cc9; font-weight: 600;">flag3:d</span>
-            <br>
-            <span style="font-size: 0.8rem; color: #6b7280;">剩下的碎片藏在成员列表，点开头像有惊喜</span>
+          <!-- 彩蛋提示 -->
+          <div style="margin-top: 1rem; padding: 0.8rem; background: linear-gradient(135deg, rgba(99,179,237,0.12), rgba(183,148,244,0.12)); border: 1px solid rgba(99,179,237,0.3); border-radius: 0.75rem; text-align: center;">
+            <span style="font-size: 0.9rem; color: #4f8cc9; font-weight: 600;">🥚 发现一枚彩蛋！去成员列表点开头像，有惊喜等着你 ✨</span>
           </div>
         </div>
 
-        <!-- 加入方式 -->
         <div class="rounded-xl border border-[var(--border-color-subtle)] bg-[var(--background-color)] p-6 shadow-sm text-center">
           <h2 class="text-xl font-bold mb-4 flex items-center justify-center gap-2">
             <span>📬</span> 加入方式
