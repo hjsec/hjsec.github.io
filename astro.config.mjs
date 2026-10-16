@@ -36,7 +36,7 @@ const viteConfig = {
 
 export default defineConfig({
   compressHTML: true,
-  site: 'https://hjsec.github.io',
+  site: 'https://hjsec.top',
   integrations: [compress(), icon(), mdx(), sitemap()],
   vite: viteConfig,
   env: {
