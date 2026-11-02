@@ -38,9 +38,25 @@ export default defineThemeConfig({
         href: '/portfolio',
       },
       {
-        label: '知识库',
+        label: '对外服务',
         type: 'dropdown',
         items: [
+          {
+            label: '在线工具',
+            href: 'https://tool.hjsec.top',
+          },
+          {
+            label: 'CTF 靶场',
+            href: 'https://ctf.hjsec.top',
+          },
+          {
+            label: '加入我们',
+            href: 'https://join.hjsec.top',
+          },
+          {
+            label: '周报系统',
+            href: 'https://study.hjsec.top',
+          },
           {
             label: '知识库首页',
             href: '/blog',
